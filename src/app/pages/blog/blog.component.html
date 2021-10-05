@@ -1,0 +1,238 @@
+
+<section class="breadcrumb-container">
+  <div class="overlay"></div>
+  <div class="container">
+      <div class="row">
+          <div class="breadcrumb-content">
+              <h2>Blog Details</h2>
+              <nav aria-label="breadcrumb" class="my-breadcrumb">
+                  <ol class="breadcrumb">
+                      <li class="breadcrumb-item"><a (click)="goto('home')">Home</a>
+                      </li>
+                      <li class="breadcrumb-item active" aria-current="page">Information Technology &amp; Business</li>
+                  </ol>
+              </nav>
+          </div>
+      </div>
+  </div>
+</section>
+
+<section class="blog">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-8 col-md-9 col-lg-9 col-xl-9 col-xxl-9">
+        <div class="blog-post">
+          <div class="row">
+            <div class="col-md-2">
+              <div class="blog-date">
+                <h2 class="dt">24</h2>
+                <span class="d-block text-center">September</span>
+                <!-- <span class="d-block text-center">October</span> -->
+              </div>
+            </div>
+            <div class="col-md-10 blog-heading-container">
+              <!--<div class="addthis_inline_share_toolbox wow animate__animated animate__slideInDown"></div>-->
+              <div class="blog-heading">
+                <h2 class="blog-title">Information Technology &amp; Business</h2>
+              </div>
+              <div class="extra-info">
+                <span class=""><i class="far fa-user"></i> posted by <br>Authr Name </span>
+                <span class=""><i class="far fa-bookmark"></i> Categories: <div class="blog-categories">
+                    <a href="blogs.php?categorie="></a>
+                  </div>
+                </span>
+              </div>
+            </div>
+          </div>
+          <img
+            src="https://images.unsplash.com/photo-1531497865144-0464ef8fb9a9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=774&q=80"
+            class="img-fluid " alt="" title="">
+          <div class="" id="myBlog">
+            <h3>Title</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod itaque aspernatur possimus
+              illo voluptatibus officia laborum laboriosam neque beatae molestias maxime doloremque,
+              ab cupiditate voluptatem labore ratione numquam iste, quaerat alias eos est recusandae
+              delectus vitae atque? Nobis distinctio ut voluptas quibusdam est veritatis qui eligendi
+              commodi iusto molestiae cumque facilis, aliquid necessitatibus illum sequi quis dolor
+              exercitationem! Ipsa dicta expedita inventore quam assumenda excepturi, aut fuga earum
+              aliquam dolore fugit eveniet quaerat, provident atque tempora praesentium. Magni
+              suscipit obcaecati similique sequi numquam ipsa est eveniet expedita vitae, repudiandae
+              placeat id animi? Quibusdam ipsam vel est sit inventore. Enim, nesciunt.</p>
+          </div>
+          <!--<div class="addthis_inline_share_toolbox wow animate__animated animate__slideInUp"></div>-->
+        </div>
+        <!-- /.blog-post -->
+        <hr>
+        <nav aria-label="blog-pagination">
+          <ul class="pagination">
+            <li class="page-item disabled">
+              <span class="page-link">Previous</span>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item active" aria-current="page">
+              <span class="page-link">
+                2
+                <span class="visually-hidden">(current)</span>
+              </span>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+              <a class="page-link" href="#">Next</a>
+            </li>
+          </ul>
+        </nav>
+        <hr>
+        <form action="">
+          <div class="row">
+            <div class="col-md-6 col-lg-6 col-xl-6">
+              <div class="form-group">
+                <label for="Name" class="my-lead mb-2">Name*</label>
+                <input type="text" name="name" class="form-control" placeholder="Enter Your Name*" required />
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-6 col-xl-6">
+              <div class="form-group">
+                <label for="Mobile" class="my-lead">Mobile* <i class="fas fa-question-circle"
+                    title="Your will get notified by message when doctor replies"></i></label>
+                <input type="number" name="mobile" class="form-control" placeholder="Enter Your Mobile Number*"
+                  required />
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12 col-lg-12 col-xl-12">
+              <div class="form-group">
+                <label for="Email" class="my-lead">Email*</label>
+                <input type="Email" name="name" class="form-control" placeholder="Enter Your Email Id*" required />
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="form-group">
+                <label for="message" class="my-lead">Add comment</label>
+                <textarea id="message" name="message" class="form-control comment-box"
+                  placeholder="Write Your Comment here..*" rows="4" onkeyup="countChar(this)"></textarea>
+              </div>
+              <div id="charNum"></div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="form-group">
+                <button type="submit" class="btn primary-btn">Post Comment</button>
+              </div>
+              <div id="charNum"></div>
+            </div>
+          </div>
+        </form>
+        <div class="comment-section">
+          <!-- the comments -->
+          <div class="comment">
+            <img src="assets/img/placeholder.png" alt="" class="rounded mr-2" width="30px">
+            <span>
+              Amol Impal says
+              <small class="ml-2"> 10 mins ago</small>
+            </span>
+          </div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam provident praesentium
+            aperiam
+            corporis nesciunt molestias sunt! Qui nemo obcaecati molestias esse laudantium, sunt
+            provident consequuntur corporis cupiditate nihil inventore vitae.</p>
+
+          <div class="reaction-bar">
+            <a href="" class="like" name="like"><i class="fas fa-heart"></i> like</a>
+            <a href="#addreply" class="reply" name="reply" data-bs-toggle="collapse" role="button" aria-expanded="false"
+              aria-controls="addreply"><i class="fas fa-reply"></i>
+              Reply</a>
+          </div>
+          <div class="collapse" id="addreply">
+            <div class="reply-section">
+              <form action="">
+                <div class="row">
+                  <div class="col-md-6 col-lg-6 col-xl-6">
+                    <div class="form-group">
+                      <label for="Name" class="my-lead mb-2">Name*</label>
+                      <input type="text" name="name" class="form-control" placeholder="Enter Your Name*" required />
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-lg-6 col-xl-6">
+                    <div class="form-group">
+                      <label for="Mobile" class="my-lead">Mobile* <i class="fas fa-question-circle"
+                          title="Your will get notified by message when doctor replies"></i></label>
+                      <input type="number" name="mobile" class="form-control" placeholder="Enter Your Mobile Number*"
+                        required />
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12 col-lg-12 col-xl-12">
+                    <div class="form-group">
+                      <label for="Email" class="my-lead">Email*</label>
+                      <input type="Email" name="name" class="form-control" placeholder="Enter Your Email Id*"
+                        required />
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <label for="message" class="my-lead">Add comment</label>
+                      <textarea id="message" name="message" class="form-control comment-box"
+                        placeholder="Write Your Comment here..*" rows="4" onkeyup="countChar(this)"></textarea>
+                    </div>
+                    <div id="charNum"></div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <button type="submit" class="btn primary-btn">Post
+                        Comment</button>
+                    </div>
+                    <div id="charNum"></div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <hr>
+        </div>
+        <hr>
+      </div>
+
+      <aside class="col-xs-12 col-sm-4 col-md-3 col-lg-3 col-xl-3 col-xxl-3 sidebar">
+        <div class="sidebar-content">
+          <h4 class="">Recent Blogs</h4>
+          <ul class="old-blogs">
+            <li><a href="">Information Technology &amp; Business </a></li>
+            <li><a href="">Information Technology &amp; Business </a></li>
+            <li><a href="">Information Technology &amp; Business </a></li>
+            <li><a href="">Information Technology &amp; Business </a></li>
+            <li><a href="">Information Technology &amp; Business </a></li>
+          </ul>
+        </div>
+
+        <div class="sidebar-content">
+          <h4 class="">Blogs Categories</h4>
+          <ul class="old-blogs">
+            <li class=""><a href="#">Some Titles</a></li>
+            <li class=""><a href="#">Some Titles</a></li>
+            <li class=""><a href="#">Some Titles</a></li>
+            <li class=""><a href="#">Some Titles</a></li>
+            <li class=""><a href="#">Some Titles</a></li>
+          </ul>
+        </div>
+        <div class="sidebar-content">
+          <h4 class="">Tags</h4>
+          <div class="tag-container">
+            <span class="tag">Information</span>
+            <span class="tag">Technology</span>
+          </div>
+
+        </div>
+      </aside>
+    </div>
+  </div>
+
+</section>
