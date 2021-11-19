@@ -4,8 +4,8 @@
 // Color Palette
 $mainColor: #fbfbfb;
 $white: #ffffff;
-// $$primaryPinkOld: #ff1b46*;
-$primaryYellow: #fbff00;
+$primaryPink: #ff1b46;
+// $$primaryYellow: #fbff00;
 $darkBlue: #0e001d;
 $purple: #3e047b;
 $manatee: #8d99ae;
@@ -54,12 +54,12 @@ body {
 }
 
 a {
-  color: $primaryYellow;
+  color: $primaryPink;
   transition: 1s;
 }
 
 a:hover {
-  color: $primaryYellow;
+  color: $primaryPink;
 }
 
 a,
@@ -175,19 +175,19 @@ section {
 
     &:hover {
       background-color: $white;
-      border-color: $primaryYellow;
-      color: $black
+      border-color: $primaryPink;
+      color: $black;
     }
   }
   &.secondary-btn {
-    background-color: $primaryYellow;
-    border-color: $primaryYellow;
-    color: $black;
+    background-color: $primaryPink;
+    border-color: $primaryPink;
+    color: $white;
 
     &:hover {
       background-color: $white;
-      border-color: $primaryYellow;
-      color: $primaryYellow;
+      border-color: $primaryPink;
+      color: $primaryPink;
     }
   }
 }
@@ -212,7 +212,7 @@ section {
       content: "";
       width: 25%;
       height: 3px;
-      background: $primaryYellow;
+      background: $primaryPink;
     }
   }
   h2 {
@@ -305,7 +305,7 @@ video {
       text-decoration: none;
     }
     &.active {
-      color: $primaryYellow;
+      color: $primaryPink;
     }
   }
 }
@@ -348,7 +348,7 @@ video {
 
       &.active,
       &:hover {
-        color: $primaryYellow;
+        color: $primaryPink;
 
         &::after {
           position: absolute;
@@ -386,7 +386,7 @@ video {
 
     span {
       font-weight: 700;
-      color: $primaryYellow;
+      color: $primaryPink;
     }
   }
   p {
@@ -424,7 +424,7 @@ video {
       transition: all 1s cubic-bezier(0, -0.5, 0, 0.39) !important;
 
       &:hover {
-        color: $primaryYellow;
+        color: $primaryPink;
         top: -1px;
       }
     }
@@ -642,11 +642,11 @@ video {
       z-index: 1;
       transition: 0.6s;
       transform: rotate(144deg);
-      background: linear-gradient(180deg, $primaryYellow 0%, rgba(192, 7, 41, 0.055) 100%);
+      background: linear-gradient(180deg, $primaryPink 0%, rgba(192, 7, 41, 0.055) 100%);
       border-radius: 10%;
     }
     &:hover {
-      border-color: $primaryYellow;
+      border-color: $primaryPink;
       &::before {
         top: 0;
         left: 0;
@@ -684,7 +684,7 @@ video {
       box-shadow: -20px 20px 40px 0px #e5e5e5;
       .icon-container {
         text-align: center;
-        background-color: rgba($primaryYellow, 10%);
+        background-color: rgba($primaryPink, 10%);
         width: 70px;
         height: 70px;
         margin: 0 auto 30px;
@@ -692,7 +692,7 @@ video {
         @extend .flex-center;
         i {
           font-size: 40px;
-          color: $primaryYellow;
+          color: $primaryPink;
         }
       }
       .content {
@@ -917,73 +917,74 @@ footer {
 
 .follow-us {
   background-color: $darkBlue;
+  .titleContainer {
+    span {
+      color: $manatee;
+    }
+    h2 {
+      color: $white;
+    }
+  }
 
   .social-links {
     list-style: none;
     padding-left: 0;
-    display: flex;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    align-items: center;
-    justify-content: space-around;
+    @extend .flex-center-around;
     max-width: 600px;
     margin: 10% auto 0 auto;
     background-color: rgb(0 10 29 / 70%);
     border-radius: 30px;
     position: relative;
-    &::before {
-      position: absolute;
-      top: 0;
-      left: 0;
-      content: "";
-      background-color: rgb(255 255 255 /5%);
-      width: 100%;
-      height: 50%;
-      border-radius: 30px 30px 0 0;
-    }
-    li {
-      position: relative;
-      a {
-        color: $white;
-        padding: 15px 30px;
-        display: block;
-        text-align: center;
-
-        &:hover {
-          &::before {
-            position: absolute;
-            top: 0;
-            left: 50%;
-            transform: translate(-50%);
-            content: "";
-            z-index: -1;
-            width: 55px;
-            height: 55px;
-            border-radius: 50%;
-          }
-        }
-        &:nth-child(1)::before {
-          background-color: #3b5998;
-          box-shadow: 0 0 15px #3b5998, 0 0 30px #3b5998, 0 0 45px #3b5998, 0 0 60px 40px #3b5998;
-        }
-        &:nth-child(2)::before {
-          background-color: #00aced;
-          box-shadow: 0 0 15px #00aced, 0 0 30px #00aced, 0 0 45px #00aced, 0 0 60px 40px #00aced;
-        }
-        &:nth-child(3)::before {
-          background-color: #8a3ab9;
-          box-shadow: 0 0 15px #8a3ab9, 0 0 30px #8a3ab9, 0 0 45px #8a3ab9, 0 0 60px 40px #8a3ab9;
-        }
-        &:nth-child(4)::before {
-          background-color: #007bb6;
-          box-shadow: 0 0 15px #007bb6, 0 0 30px #007bb6, 0 0 45px #007bb6, 0 0 60px 40px #007bb6;
-        }
-        &:nth-child(5)::before {
-          background-color: #bb0000;
-          box-shadow: 0 0 15px #bb0000, 0 0 30px #bb0000, 0 0 45px #bb0000, 0 0 60px 40px #bb0000;
-        }
-      }
-    }
+  }
+  .social-links::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    background-color: rgb(255 255 255 /5%);
+    width: 100%;
+    height: 50%;
+    border-radius: 30px 30px 0 0;
+  }
+  .social-links li {
+    position: relative;
+  }
+  .social-links li a {
+    color: #ffffff;
+    padding: 15px 30px;
+    display: block;
+    text-align: center;
+  }
+  .social-links li:hover::before {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+    content: "";
+    z-index: -1;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+  }
+  .social-links li:nth-child(1)::before {
+    background-color: #3b5998;
+    box-shadow: 0 0 15px #3b5998, 0 0 30px #3b5998, 0 0 45px #3b5998, 0 0 60px 40px #3b5998;
+  }
+  .social-links li:nth-child(2)::before {
+    background-color: #00aced;
+    box-shadow: 0 0 15px #00aced, 0 0 30px #00aced, 0 0 45px #00aced, 0 0 60px 40px #00aced;
+  }
+  .social-links li:nth-child(3)::before {
+    background-color: #8a3ab9;
+    box-shadow: 0 0 15px #8a3ab9, 0 0 30px #8a3ab9, 0 0 45px #8a3ab9, 0 0 60px 40px #8a3ab9;
+  }
+  .social-links li:nth-child(4)::before {
+    background-color: #007bb6;
+    box-shadow: 0 0 15px #007bb6, 0 0 30px #007bb6, 0 0 45px #007bb6, 0 0 60px 40px #007bb6;
+  }
+  .social-links li:nth-child(5)::before {
+    background-color: #bb0000;
+    box-shadow: 0 0 15px #bb0000, 0 0 30px #bb0000, 0 0 45px #bb0000, 0 0 60px 40px #bb0000;
   }
 }
 
@@ -1041,7 +1042,7 @@ footer {
       @extend .flex-center-between;
       flex-wrap: wrap;
       padding: 30px;
-      background-color: $primaryYellow;
+      background-color: $primaryPink;
       width: 90%;
       transition: 0.3s linear;
       float: right;
@@ -1248,7 +1249,7 @@ footer {
       margin: 15px auto;
     }
     a {
-      color: $primaryYellow;
+      color: $primaryPink;
       &:hover {
         color: $white;
       }
@@ -1299,16 +1300,16 @@ footer {
       }
       a.like {
         &:hover {
-          color: $primaryYellow;
+          color: $primaryPink;
         }
         .active {
-          color: $primaryYellow;
-          color: $primaryYellow;
+          color: $primaryPink;
+          color: $primaryPink;
         }
       }
       a.reply {
         &:hover {
-          color: $primaryYellow;
+          color: $primaryPink;
         }
       }
     }
@@ -1351,17 +1352,17 @@ footer {
 .page-item {
   &:hover {
     .page-link {
-      background-color: $primaryYellow;
+      background-color: $primaryPink;
       color: $white;
-      border-color: $primaryYellow;
+      border-color: $primaryPink;
     }
   }
 }
 .page-item.active {
   .page-link {
-    background-color: $primaryYellow;
+    background-color: $primaryPink;
     color: $white;
-    border-color: $primaryYellow;
+    border-color: $primaryPink;
   }
 }
 .sidebar {
@@ -1387,7 +1388,7 @@ footer {
         padding: 15px 20px;
         display: block;
         &:hover {
-          color: $primaryYellow;
+          color: $primaryPink;
         }
       }
     }
@@ -1412,7 +1413,7 @@ footer {
         padding: 10px;
         display: block;
         &:hover {
-          color: $primaryYellow;
+          color: $primaryPink;
         }
       }
     }
@@ -1421,39 +1422,48 @@ footer {
 
 // Contact
 .contact {
-	background-color: #ffffff;
-	h3 {
-		color: #000000;
-		font-size: 24px;
-	}
-	ul {
-		list-style-type: none;
-		margin-top: 30px;
-		padding-left: 15px;
-		li {
-			font-size: 16px;
-			margin-bottom: 30px;
-			a {
-				color: #666666;
-				&:hover {
-					color: #ff6008;
-				}
-			}
-		}
-	}
-	label {
-		color: #000000;
-		margin: 10px auto;
-	}
-	iframe {
-		padding: 0px;
-		margin: 80px 0px 0px 0px;
-		filter: grayscale(1);
-		-webkit-filter: grayscale(1);
-		transition: 2s;
-		&:hover {
-			filter: grayscale(0);
-			-webkit-filter: grayscale(0);
-		}
-	}
+  background-color: #ffffff;
+  h3 {
+    color: #000000;
+    font-size: 24px;
+  }
+  ul {
+    list-style-type: none;
+    margin-top: 30px;
+    padding-left: 15px;
+    li {
+      font-size: 16px;
+      margin-bottom: 30px;
+      a {
+        color: #666666;
+        &:hover {
+          color: #ff6008;
+        }
+      }
+    }
+  }
+  label {
+    color: #000000;
+    margin: 10px auto;
+  }
+  iframe {
+    padding: 0px;
+    margin: 80px 0px 0px 0px;
+    filter: grayscale(1);
+    -webkit-filter: grayscale(1);
+    transition: 2s;
+    &:hover {
+      filter: grayscale(0);
+      -webkit-filter: grayscale(0);
+    }
+  }
+}
+
+footer {
+  background-color: $darkBlue;
+  color: $white;
+  border-top: 1px solid $purple;
+  a {
+    color: $white;
+  }
 }
