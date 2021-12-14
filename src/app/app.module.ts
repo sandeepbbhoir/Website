@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './component/header/header.component';
 import { FooterComponent } from './component/footer/footer.component';
 import { BlogComponent } from './pages/blog/blog.component';
-import { BreadcrumbComponent } from './component/breadcrumb/breadcrumb.component';
 
 
 @NgModule({
@@ -15,7 +14,6 @@ import { BreadcrumbComponent } from './component/breadcrumb/breadcrumb.component
     HeaderComponent,
     FooterComponent,
     BlogComponent,
-    BreadcrumbComponent,
   ],
   imports: [
     BrowserModule,
