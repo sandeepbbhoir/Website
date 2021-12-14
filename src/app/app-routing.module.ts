@@ -20,12 +20,20 @@ const routes: Routes = [
     loadChildren: ()=>import('./pages/services/services.module').then(m =>m.ServicesModule)
   },
   {
+    path:'portfolio',
+    loadChildren: ()=>import('./pages/portfolio/portfolio.module').then(m =>m.PortfolioModule)
+  },
+  {
     path:'blogs',
     loadChildren: ()=>import('./pages/blogs/blogs.module').then(m =>m.BlogsModule)
   },
   {
     path:'blog',
     loadChildren: ()=>import('./pages/blog/blog.module').then(m =>m.BlogModule)
+  },
+  {
+    path:'customize',
+    loadChildren: ()=>import('./pages/customize/customize.module').then(m =>m.CustomizeModule)
   },
   {
     path:'contact',
