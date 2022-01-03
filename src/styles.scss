@@ -2,15 +2,17 @@
 @import url("https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css");
 
 // Color Palette
-$mainColor: #f5f5f5;
+$mainColor: #e7f1ff;
 $white: #ffffff;
-$primaryPink: #ff1b46;
+$primaryBlue: #1f51ff;
+$primaryYellow: #ffdd37;
 // $$primaryYellow: #fbff00;
 $darkBlue: #0e001d;
 $purple: #3e047b;
 $manatee: #8d99ae;
 $black: #000a1d;
 $lavenderBlue: #d3d6ff;
+$aqua: #1fffff;
 
 // Activity Colors
 $success: #219234;
@@ -34,7 +36,7 @@ html {
 }
 
 body {
-  background-color: $darkBlue;
+  background-color: $black;
   font-family: "Source Sans Pro", sans-serif;
   font-size: $largeFont;
   font-weight: 500;
@@ -51,15 +53,25 @@ body {
   position: relative;
   overflow-y: scroll;
   overflow-x: hidden;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  & {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
 }
 
 a {
-  color: $primaryPink;
+  color: $primaryBlue;
   transition: 1s;
 }
 
 a:hover {
-  color: $primaryPink;
+  color: $primaryBlue;
 }
 
 a,
@@ -87,7 +99,6 @@ img {
 section {
   padding: 100px 0;
   position: relative;
-  min-height: 100vh;
 }
 .flex {
   display: flex;
@@ -171,30 +182,30 @@ section {
   padding: 15px 30px;
   margin: 10px 10px 10px 0;
   border: 1px solid transparent;
-  border-radius: 0;
+  border-radius: 50px;
   transition: 1s !important;
   display: inline-block;
 
   &.primary-btn {
-    background-color: $white;
-    border-color: $white;
-    color: $black;
-
-    &:hover {
-      background-color: $white;
-      border-color: $primaryPink;
-      color: $black;
-    }
-  }
-  &.secondary-btn {
-    background-color: $primaryPink;
-    border-color: $primaryPink;
+    background-color: $primaryBlue;
+    border-color: $primaryBlue;
     color: $white;
 
     &:hover {
+      background-color: $darkBlue;
+      border-color: $primaryBlue;
+      color: $white;
+    }
+  }
+  &.secondary-btn {
+    background-color: $white;
+    border-color: $primaryBlue;
+    color: $darkBlue;
+
+    &:hover {
       background-color: $white;
-      border-color: $primaryPink;
-      color: $primaryPink;
+      border-color: $primaryBlue;
+      color: $primaryBlue;
     }
   }
 }
@@ -208,7 +219,7 @@ section {
     font-family: "Exo 2", sans-serif;
     font-size: $subHeading;
     font-weight: 400;
-    color: $primaryPink;
+    color: $primaryBlue;
     position: relative;
     display: inline-block;
     margin-bottom: 24px;
@@ -221,7 +232,7 @@ section {
       content: "";
       width: 25%;
       height: 3px;
-      background: $primaryPink;
+      background: $primaryBlue;
     }
   }
   h2 {
@@ -253,8 +264,8 @@ video {
   width: auto;
   height: auto;
   z-index: 0;
-  mix-blend-mode: color-dodge;
-  // mix-blend-mode: hard-light;
+  mix-blend-mode: hard-light;
+  filter: hue-rotate(3.142rad);
 }
 .breadcrumb-container {
   background-image: url(../src/assets/img/breadcrumb.jpg);
@@ -278,7 +289,9 @@ video {
   bottom: 0;
   content: "";
   z-index: 1;
-  background: rgb(14 0 29 / 55%);
+  // background: rgb(17 111 255 / 12%);
+  // background: rgb(17 111 255 / 50%);
+  background: rgb(30 27 255 / 68%);
   width: 100%;
   height: 100%;
 }
@@ -308,7 +321,7 @@ video {
       text-decoration: none;
     }
     &.active {
-      color: $primaryPink;
+      color: $primaryBlue;
     }
   }
 }
@@ -326,7 +339,7 @@ video {
 
 // Navbar
 .navbar {
-  background-color: rgba($darkBlue, 80%) !important;
+  background-color: rgb($black, 10%) !important;
   border-bottom: none;
 
   .navbar-brand {
@@ -340,7 +353,6 @@ video {
   }
   .nav-item {
     font-size: $xSmallFont;
-
     font-weight: 600;
     text-transform: uppercase;
     cursor: pointer;
@@ -351,7 +363,7 @@ video {
 
       &.active,
       &:hover {
-        color: $primaryPink;
+        color: $aqua;
 
         &::after {
           position: absolute;
@@ -361,7 +373,7 @@ video {
           content: "";
           width: 50%;
           height: 2px;
-          background-color: $white;
+          background-color: $primaryBlue;
         }
       }
     }
@@ -369,7 +381,7 @@ video {
 }
 // Hero
 .hero {
-  background-color: $darkBlue;
+  background-color: $black;
   // background-image: url(../src/assets/img/hero.jpg);
   @extend .backgroundImg;
   background-position: center;
@@ -383,30 +395,22 @@ video {
   h2 {
     font-size: 62px;
     font-weight: 700;
-    color: $white;
+    color: $mainColor;
     text-transform: capitalize;
+    letter-spacing: -3.5px;
     // text-shadow: 1px 11px 6px rgb(0 0 0 / 12%);
 
     span {
       font-weight: 700;
-      color: $primaryPink;
+      color: #1fffff;
+      text-shadow: 10px 0px 10px rgb(7 7 84 / 68%);
     }
   }
   p {
     font-size: $smallFont;
-    color: $white;
+    color: $mainColor;
     margin: 20px 0 50px;
     width: 80%;
-  }
-  .primary-btn:hover {
-    background-color: transparent;
-    border-color: $white;
-    color: $white;
-  }
-  .secondary-btn:hover {
-    background-color: transparent;
-    border-color: $white;
-    color: $white;
   }
 
   .socialLinks {
@@ -423,12 +427,10 @@ video {
       padding: 10px 15px;
       display: block;
       position: relative;
-      top: 0;
       transition: all 1s cubic-bezier(0, -0.5, 0, 0.39) !important;
 
       &:hover {
-        color: $primaryPink;
-        top: -1px;
+        color: $aqua;
       }
     }
   }
@@ -563,10 +565,10 @@ video {
       height: 300px;
       border-radius: 50%;
       /* background-color: #f8ceec; */
-      background-image: linear-gradient(135deg, #ff1b46 0%, #ff1b4600 74%);
+      background-image: linear-gradient(135deg, $aqua 0%, #ff1b4600 74%);
       z-index: -1;
       animation: upDown 5s ease-out 0s alternate infinite none running,
-      spin 20s ease-out 0s alternate infinite none running;
+        spin 20s ease-out 0s alternate infinite none running;
     }
     &::after {
       top: 0;
@@ -577,11 +579,11 @@ video {
       border-radius: 50%;
       /* background-color: #f8ceec; */
       // background-color: #42378f;
-      background-image: linear-gradient(315deg, #42378f 0%, #f53844 74%);
+      background-image: linear-gradient(315deg, #42378f 0%, $aqua 74%);
 
       z-index: -1;
       animation: upDown 15s ease-out 0s alternate infinite none running,
-      spin 2s ease-out 0s alternate infinite none running;
+        spin 2s ease-out 0s alternate infinite none running;
     }
     @keyframes upDown {
       from {
@@ -596,9 +598,8 @@ video {
         transform: translateY(0px) rotate(0deg);
       }
       to {
-        transform: translateY(20px) rotate(90deg)
+        transform: translateY(20px) rotate(90deg);
       }
-
     }
     img {
       display: block;
@@ -625,7 +626,7 @@ video {
       h3 {
         font-size: $mainHeading - 20px;
         font-weight: 600;
-        color: $primaryPink;
+        color: $aqua;
         margin-bottom: 15px;
         letter-spacing: normal !important;
       }
@@ -634,12 +635,13 @@ video {
 }
 // Services
 .services {
-  background-color: $darkBlue;
+  // background-color: $darkBlue;
+  background-color: #141cb3;
   background-image: url("../src/assets/img/services.jpg");
   @extend .backgroundImg;
   background-attachment: fixed;
   background-position: top;
-  background-blend-mode: color-dodge;
+  background-blend-mode: lighten;
 
   .titleContainer {
     text-align: center;
@@ -660,9 +662,10 @@ video {
     margin: 0 auto 70px;
   }
   .serviceBox {
-    background-color: rgba($darkBlue, 75%);
+    // background-color: rgba($darkBlue, 75%);
+    background-color: rgb(20 28 179);
     padding: 50px 30px;
-    border: 1px solid $purple;
+    border: 1px solid #1a23d7;
     border-radius: 10px;
     transition: 1s;
     position: relative;
@@ -678,7 +681,7 @@ video {
       transition: 0.7s;
     }
     h3 {
-      font-size: $largeFont + $xSmallFont;
+      font-size: $largeFont + 5px;
       color: $white;
       margin-bottom: 20px;
     }
@@ -707,12 +710,12 @@ video {
       z-index: 1;
       transition: 0.6s;
       transform: rotate(0deg);
-      background: linear-gradient(0deg, rgba($primaryPink, 30%) 0%, transparent 60%);
+      background: linear-gradient(0deg, rgba($primaryBlue, 30%) 0%, transparent 60%);
       border-radius: 0;
     }
     &:hover {
-      border-color: $primaryPink;
-      box-shadow: 0 0 50px 5px rgba($primaryPink, 30%);
+      border-color: $aqua;
+      box-shadow: 0 0 50px 5px rgba($primaryBlue, 30%);
       transform: translateY(-15px);
       &::before {
         bottom: 0%;
@@ -747,13 +750,14 @@ video {
     text-align: center;
   }
   .why-us-box {
-    background-color: $darkBlue;
+    background-color: rgba($darkBlue, 15%);
     margin-bottom: 30px;
- border: 1px solid $purple;
+    border: 1px solid $purple;
     border-radius: 0;
     backdrop-filter: blur(10px);
+    position: relative;
     .why-us-box-content {
-      padding: 50px 30px;
+      padding: 100px 30px;
       .icon-container {
         $wh: 100px;
         width: $wh;
@@ -812,6 +816,7 @@ video {
     position: relative;
     margin-bottom: 30px;
     overflow: hidden;
+
     .overlay-text {
       position: absolute;
       top: 0;
@@ -864,11 +869,11 @@ video {
     margin-bottom: 50px;
   }
   .qualityBox {
-    background-color: $white;
+    background-color: transparent;
     text-align: center;
     padding: 30px;
     filter: drop-shadow(0px 30px 20px rgba(73, 73, 73, 0.05));
-    border: 1px solid $mainColor;
+    border: 1px solid $purple;
     height: 100%;
     @extend .flex-center;
 
@@ -879,7 +884,7 @@ video {
       }
       h3 {
         font-size: $subHeading;
-        color: $black;
+        color: $white;
         margin-top: 30px;
       }
     }
@@ -953,12 +958,12 @@ video {
       z-index: 1;
       transition: 0.6s;
       transform: rotate(0deg);
-      background: linear-gradient(0deg, rgba($primaryPink, 30%) 0%, transparent 60%);
+      background: linear-gradient(0deg, rgba($primaryBlue, 30%) 0%, transparent 60%);
       border-radius: 0;
     }
     &:hover {
-      border-color: $primaryPink;
-      box-shadow: 0 0 10px px rgba($primaryPink, 50%);
+      border-color: $primaryBlue;
+      box-shadow: 0 0 10px px rgba($primaryBlue, 50%);
       &::before {
         bottom: 0%;
         left: 0;
@@ -1132,7 +1137,7 @@ footer {
 
 // About Us Page
 .about-us {
-  background-color: $white;
+  background-color: $darkBlue;
   .about-img-container {
     position: relative;
     .experience {
@@ -1143,7 +1148,7 @@ footer {
       z-index: 2;
       width: auto;
       transform: rotate(-90deg);
-      background-color: $darkBlue;
+      background-color: $primaryBlue;
       padding: 10px;
       color: $white;
     }
@@ -1171,10 +1176,10 @@ footer {
   }
 }
 .our-team {
-  background-color: $white;
+  background-color: $purple;
 
   .team-box {
-    background-color: $white;
+    background-color: $darkBlue;
     padding: 0;
     img {
       width: 100%;
@@ -1197,13 +1202,13 @@ footer {
     &:hover {
       .info {
         width: 100%;
-        background-color: $primaryPink;
+        background-color: $primaryBlue;
       }
     }
     .social-links-container {
       position: relative;
       span {
-        background-color: $primaryPink;
+        background-color: $primaryBlue;
         color: $white;
         padding: 5px 12px;
         @extend .flex-center;
@@ -1222,7 +1227,7 @@ footer {
           width: 100%;
 
           &:hover {
-            background-color: $primaryPink;
+            background-color: $primaryBlue;
             color: $white;
           }
         }
@@ -1242,7 +1247,7 @@ footer {
 }
 // Blogs
 .blogs {
-  background-color: $white;
+  background-color: $darkBlue;
   .blog-box {
     background-color: $white;
     border: 1px solid #e5e5e5;
@@ -1401,7 +1406,7 @@ footer {
       margin: 15px auto;
     }
     a {
-      color: $primaryPink;
+      color: $primaryBlue;
       &:hover {
         color: $white;
       }
@@ -1452,16 +1457,16 @@ footer {
       }
       a.like {
         &:hover {
-          color: $primaryPink;
+          color: $primaryBlue;
         }
         .active {
-          color: $primaryPink;
-          color: $primaryPink;
+          color: $primaryBlue;
+          color: $primaryBlue;
         }
       }
       a.reply {
         &:hover {
-          color: $primaryPink;
+          color: $primaryBlue;
         }
       }
     }
@@ -1504,17 +1509,17 @@ footer {
 .page-item {
   &:hover {
     .page-link {
-      background-color: $primaryPink;
+      background-color: $primaryBlue;
       color: $white;
-      border-color: $primaryPink;
+      border-color: $primaryBlue;
     }
   }
 }
 .page-item.active {
   .page-link {
-    background-color: $primaryPink;
+    background-color: $primaryBlue;
     color: $white;
-    border-color: $primaryPink;
+    border-color: $primaryBlue;
   }
 }
 .sidebar {
@@ -1541,9 +1546,9 @@ footer {
       }
       &:hover {
         background-color: rgba($lavenderBlue, 5%);
-        color: $primaryPink;
+        color: $primaryBlue;
         a {
-          color: $primaryPink;
+          color: $primaryBlue;
         }
       }
     }
@@ -1563,7 +1568,7 @@ footer {
         padding: 10px 15px !important;
         display: block;
         &:hover {
-          color: $primaryPink;
+          color: $primaryBlue;
         }
       }
       &:hover {
@@ -1575,7 +1580,7 @@ footer {
 
 // Contact
 .contact {
-  background-color: #ffffff;
+  background-color: $darkBlue;
   h3 {
     color: #000000;
     font-size: 24px;
@@ -1615,7 +1620,7 @@ footer {
 footer {
   background-color: $black;
   color: $white;
-  border-top: 1px dotted $primaryPink;
+  border-top: 1px dotted $primaryBlue;
   animation: borderColorChange 10s ease-in-out infinite;
   a {
     color: $white;
@@ -1623,7 +1628,7 @@ footer {
 
   @keyframes borderColorChange {
     0% {
-      border-color: $primaryPink;
+      border-color: $primaryBlue;
     }
     85% {
       border-color: #00aced;
@@ -1633,4 +1638,3 @@ footer {
     }
   }
 }
-

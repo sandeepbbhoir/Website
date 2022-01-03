@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { OwlOptions } from 'ngx-owl-carousel-o';
+// import { Parallax } from 'parallax-js';
 
 @Component({
   selector: 'app-home',
