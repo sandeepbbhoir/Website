@@ -7,7 +7,8 @@ $white: #ffffff;
 $primaryBlue: #1f51ff;
 $primaryYellow: #ffdd37;
 // $$primaryYellow: #fbff00;
-$darkBlue: #0e001d;
+// $darkBlue: #0e001d;
+$darkBlue: #00001d;
 $purple: #3e047b;
 $manatee: #8d99ae;
 $black: #000a1d;
@@ -219,7 +220,7 @@ section {
     font-family: "Exo 2", sans-serif;
     font-size: $subHeading;
     font-weight: 400;
-    color: $primaryBlue;
+    color: $aqua;
     position: relative;
     display: inline-block;
     margin-bottom: 24px;
@@ -616,6 +617,7 @@ video {
     margin: 30px 0;
     padding: 0;
     @extend .flex-center-between;
+    flex-wrap: wrap;
 
     .counterBox {
       text-align: center;
@@ -752,7 +754,7 @@ video {
   .why-us-box {
     background-color: rgba($darkBlue, 15%);
     margin-bottom: 30px;
-    border: 1px solid $purple;
+    border: 1px solid $aqua;
     border-radius: 0;
     backdrop-filter: blur(10px);
     position: relative;
