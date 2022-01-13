@@ -1,14 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { OwlOptions } from 'ngx-owl-carousel-o';
+// import { Parallax } from 'parallax-js';
+import { Lightbox } from 'ngx-lightbox';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent implements OnInit {
-
+export class HomeComponent implements OnInit
+{
 
   customOptions: OwlOptions = {
     autoplay: true,
@@ -35,6 +37,7 @@ export class HomeComponent implements OnInit {
     },
     nav: true
   }
+
 
   constructor(private router: Router) {
 

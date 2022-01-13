@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
 import { CarouselModule } from 'ngx-owl-carousel-o';
+import { LightboxModule } from 'ngx-lightbox';
 
 @NgModule({
   declarations: [
@@ -12,7 +13,8 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
   imports: [
     CommonModule,
     HomeRoutingModule,
-    CarouselModule
+    CarouselModule,
+    LightboxModule
   ]
 })
 export class HomeModule { }
