@@ -20,6 +20,10 @@ const routes: Routes = [
     loadChildren: ()=>import('./pages/services/services.module').then(m =>m.ServicesModule)
   },
   {
+    path:'service',
+    loadChildren: ()=>import('./pages/service/service.module').then(m =>m.ServiceModule)
+  },
+  {
     path:'portfolio',
     loadChildren: ()=>import('./pages/portfolio/portfolio.module').then(m =>m.PortfolioModule)
   },

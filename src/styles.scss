@@ -4,16 +4,13 @@
 // Color Palette
 $mainColor: #e7f1ff;
 $white: #ffffff;
-$primaryBlue: #1f51ff;
+$primaryRed: #ff1b46;
 $primaryYellow: #ffdd37;
-// $$primaryYellow: #fbff00;
-// $darkBlue: #0e001d;
 $darkBlue: #00001d;
 $purple: #3e047b;
 $manatee: #8d99ae;
-$black: #000a1d;
+$black: #0d131f;
 $lavenderBlue: #d3d6ff;
-$aqua: #1fffff;
 
 // Activity Colors
 $success: #219234;
@@ -37,11 +34,11 @@ html {
 }
 
 body {
-  background-color: $black;
+  background-color: $darkBlue;
   font-family: "Source Sans Pro", sans-serif;
-  font-size: $largeFont;
-  font-weight: 500;
-  color: $lavenderBlue;
+  font-size: $regularFont;
+  font-weight: 400;
+  color: $black;
   letter-spacing: 0.5px;
   line-height: 1.8;
   margin: 0;
@@ -61,18 +58,18 @@ body {
 
   /* Hide scrollbar for IE, Edge and Firefox */
   & {
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
   }
 }
 
 a {
-  color: $primaryBlue;
+  color: $primaryRed;
   transition: 1s;
 }
 
 a:hover {
-  color: $primaryBlue;
+  color: $primaryRed;
 }
 
 a,
@@ -183,30 +180,30 @@ section {
   padding: 15px 30px;
   margin: 10px 10px 10px 0;
   border: 1px solid transparent;
-  border-radius: 50px;
+  border-radius: 5px;
   transition: 1s !important;
   display: inline-block;
 
   &.primary-btn {
-    background-color: $primaryBlue;
-    border-color: $primaryBlue;
+    background-color: $primaryRed;
+    border-color: $primaryRed;
     color: $white;
 
     &:hover {
       background-color: $darkBlue;
-      border-color: $primaryBlue;
+      border-color: $darkBlue;
       color: $white;
     }
   }
   &.secondary-btn {
     background-color: $white;
-    border-color: $primaryBlue;
+    border-color: $white;
     color: $darkBlue;
 
     &:hover {
       background-color: $white;
-      border-color: $primaryBlue;
-      color: $primaryBlue;
+      border-color: $primaryRed;
+      color: $primaryRed;
     }
   }
 }
@@ -220,7 +217,7 @@ section {
     font-family: "Exo 2", sans-serif;
     font-size: $subHeading;
     font-weight: 400;
-    color: $aqua;
+    color: $white;
     position: relative;
     display: inline-block;
     margin-bottom: 24px;
@@ -233,15 +230,15 @@ section {
       content: "";
       width: 25%;
       height: 3px;
-      background: $primaryBlue;
+      background: $primaryRed;
     }
   }
   h2 {
-    font-size: $mainHeading - 10px;
+    font-size: $mainHeading - 15px;
     font-weight: 700;
     color: $white;
     text-transform: capitalize;
-    letter-spacing: -3px;
+    letter-spacing: 1px;
     margin-bottom: 0;
   }
 }
@@ -265,8 +262,8 @@ video {
   width: auto;
   height: auto;
   z-index: 0;
-  mix-blend-mode: hard-light;
-  filter: hue-rotate(3.142rad);
+  mix-blend-mode: color-dodge;
+  // filter: hue-rotate(3.142rad);
 }
 .breadcrumb-container {
   background-image: url(../src/assets/img/breadcrumb.jpg);
@@ -290,9 +287,7 @@ video {
   bottom: 0;
   content: "";
   z-index: 1;
-  // background: rgb(17 111 255 / 12%);
-  // background: rgb(17 111 255 / 50%);
-  background: rgb(30 27 255 / 68%);
+  background: rgba($darkBlue, 0.5%);
   width: 100%;
   height: 100%;
 }
@@ -322,7 +317,7 @@ video {
       text-decoration: none;
     }
     &.active {
-      color: $primaryBlue;
+      color: $primaryRed;
     }
   }
 }
@@ -364,7 +359,7 @@ video {
 
       &.active,
       &:hover {
-        color: $aqua;
+        color: $white;
 
         &::after {
           position: absolute;
@@ -374,7 +369,7 @@ video {
           content: "";
           width: 50%;
           height: 2px;
-          background-color: $primaryBlue;
+          background-color: $primaryRed;
         }
       }
     }
@@ -382,13 +377,15 @@ video {
 }
 // Hero
 .hero {
-  background-color: $black;
-  // background-image: url(../src/assets/img/hero.jpg);
+  background-color: $white;
+  background-image: url(../src/assets/img/hero.jpg);
   @extend .backgroundImg;
   background-position: center;
-  // background-attachment: fixed;
+  background-attachment: fixed;
   padding: 100px 30px;
-
+  .overlay {
+    background-color: rgba($darkBlue, 50%);
+  }
   .flex-container {
     position: relative;
     z-index: 2;
@@ -403,7 +400,7 @@ video {
 
     span {
       font-weight: 700;
-      color: #1fffff;
+      color: $primaryRed;
       text-shadow: 10px 0px 10px rgb(7 7 84 / 68%);
     }
   }
@@ -431,7 +428,7 @@ video {
       transition: all 1s cubic-bezier(0, -0.5, 0, 0.39) !important;
 
       &:hover {
-        color: $aqua;
+        color: $primaryRed;
       }
     }
   }
@@ -515,7 +512,7 @@ video {
     }
   }
   .icon.icon1 {
-    top: 50%;
+    top: 80%;
     right: 20%;
   }
   .icon.icon2 {
@@ -543,10 +540,10 @@ video {
 // About
 .about {
   background-color: $darkBlue;
-  background-image: url(../src/assets/img/dot-grid.png);
-  background-repeat: repeat;
-  background-blend-mode: color-burn;
-
+  h2,
+  p {
+    color: $white;
+  }
   p {
     margin-bottom: 50px;
   }
@@ -566,7 +563,7 @@ video {
       height: 300px;
       border-radius: 50%;
       /* background-color: #f8ceec; */
-      background-image: linear-gradient(135deg, $aqua 0%, #ff1b4600 74%);
+      background-image: linear-gradient(135deg, $primaryRed 0%, #ff1b4600 74%);
       z-index: -1;
       animation: upDown 5s ease-out 0s alternate infinite none running,
         spin 20s ease-out 0s alternate infinite none running;
@@ -580,7 +577,7 @@ video {
       border-radius: 50%;
       /* background-color: #f8ceec; */
       // background-color: #42378f;
-      background-image: linear-gradient(315deg, #42378f 0%, $aqua 74%);
+      background-image: linear-gradient(315deg, #42378f 0%, $primaryRed 74%);
 
       z-index: -1;
       animation: upDown 15s ease-out 0s alternate infinite none running,
@@ -628,22 +625,24 @@ video {
       h3 {
         font-size: $mainHeading - 20px;
         font-weight: 600;
-        color: $aqua;
+        color: $primaryRed;
         margin-bottom: 15px;
         letter-spacing: normal !important;
+      }
+      span {
+        color: $white;
       }
     }
   }
 }
 // Services
 .services {
-  // background-color: $darkBlue;
-  background-color: #141cb3;
+  background-color: $darkBlue;
   background-image: url("../src/assets/img/services.jpg");
   @extend .backgroundImg;
   background-attachment: fixed;
-  background-position: top;
-  background-blend-mode: lighten;
+  background-position: center;
+  background-blend-mode: color-dodge;
 
   .titleContainer {
     text-align: center;
@@ -664,16 +663,15 @@ video {
     margin: 0 auto 70px;
   }
   .serviceBox {
-    // background-color: rgba($darkBlue, 75%);
-    background-color: rgb(20 28 179);
+    background-color: rgba($darkBlue, 75%);
     padding: 50px 30px;
-    border: 1px solid #1a23d7;
+    border: 1px dashed $purple;
     border-radius: 10px;
     transition: 1s;
     position: relative;
     overflow: hidden;
     cursor: pointer;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(2px);
     height: 100%;
 
     * {
@@ -690,6 +688,7 @@ video {
 
     p {
       font-size: $smallFont;
+      color: $white;
     }
 
     .icon {
@@ -712,12 +711,12 @@ video {
       z-index: 1;
       transition: 0.6s;
       transform: rotate(0deg);
-      background: linear-gradient(0deg, rgba($primaryBlue, 30%) 0%, transparent 60%);
+      background: linear-gradient(0deg, rgba($primaryRed, 30%) 0%, transparent 70%);
       border-radius: 0;
     }
     &:hover {
-      border-color: $aqua;
-      box-shadow: 0 0 50px 5px rgba($primaryBlue, 30%);
+      border-color: $primaryRed;
+      box-shadow: 0 0 50px 5px rgba($primaryRed, 30%);
       transform: translateY(-15px);
       &::before {
         bottom: 0%;
@@ -737,11 +736,6 @@ video {
 // Why Us
 .whyUs {
   background-color: $darkBlue;
-  background-image: url(../src/assets/img/why-us.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  background-blend-mode: color-dodge;
 
   .titleContainer {
     text-align: center;
@@ -754,18 +748,23 @@ video {
   .why-us-box {
     background-color: rgba($darkBlue, 15%);
     margin-bottom: 30px;
-    border: 1px solid $aqua;
+    border: 1px dashed $purple;
     border-radius: 0;
     backdrop-filter: blur(10px);
     position: relative;
     .why-us-box-content {
-      padding: 100px 30px;
+      padding: 50px 30px;
       .icon-container {
         $wh: 100px;
         width: $wh;
         height: $wh;
         margin: 0 auto 30px;
         @extend .flex-center;
+
+        img {
+          width: 75%;
+          margin: auto;
+        }
       }
       .content {
         text-align: center;
@@ -776,8 +775,9 @@ video {
           margin-bottom: 10px;
         }
         p {
-          font-size: $largeFont;
-          font-weight: 500;
+          font-size: $regularFont;
+          font-weight: 300;
+          color: $white;
           line-height: 1.5;
           margin: 15px 0 0;
         }
@@ -790,7 +790,7 @@ video {
 }
 // Portfolio
 .portfolio {
-  background-color: $darkBlue;
+  background-color: $purple;
   h2 {
     font-size: 60px;
     color: $white;
@@ -803,14 +803,13 @@ video {
       display: inline-block;
       padding: 15px;
       a {
+        color: $white;
         cursor: pointer;
         text-decoration: none;
-        &:hover {
-          color: #ed3237;
+        &:hover,
+        a.active {
+          color: $primaryRed;
         }
-      }
-      a.active {
-        color: #ed3237;
       }
     }
   }
@@ -868,6 +867,7 @@ video {
     margin-bottom: 20px;
   }
   p {
+    color: $white;
     margin-bottom: 50px;
   }
   .qualityBox {
@@ -875,13 +875,12 @@ video {
     text-align: center;
     padding: 30px;
     filter: drop-shadow(0px 30px 20px rgba(73, 73, 73, 0.05));
-    border: 1px solid $purple;
     height: 100%;
     @extend .flex-center;
 
     .boxContent {
       img {
-        height: 100%;
+        width: 75%;
         margin: auto;
       }
       h3 {
@@ -898,7 +897,6 @@ video {
   position: relative;
   padding: 0;
   margin: 70px 0 0;
-  border: 15px solid $white;
   iframe {
     padding: 0;
   }
@@ -910,7 +908,7 @@ video {
     z-index: -1;
     content: "";
     width: 30%;
-    box-shadow: 0 20px 20px 4px #000000;
+    box-shadow: 0 20px 20px 4px $black;
   }
 
   &::before {
@@ -960,12 +958,12 @@ video {
       z-index: 1;
       transition: 0.6s;
       transform: rotate(0deg);
-      background: linear-gradient(0deg, rgba($primaryBlue, 30%) 0%, transparent 60%);
+      background: linear-gradient(0deg, rgba($primaryRed, 30%) 0%, transparent 60%);
       border-radius: 0;
     }
     &:hover {
-      border-color: $primaryBlue;
-      box-shadow: 0 0 10px px rgba($primaryBlue, 50%);
+      border-color: $primaryRed;
+      box-shadow: 0 0 10px px rgba($primaryRed, 50%);
       &::before {
         bottom: 0%;
         left: 0;
@@ -1021,22 +1019,6 @@ video {
   }
 }
 // Footer
-footer {
-  font-size: $smallFont;
-  padding: 15px;
-  background-color: $white;
-  border-top: 1px solid #f3f3f3;
-
-  .footerLinks {
-    @extend .flex-center-end;
-
-    span {
-      display: block;
-      padding: 0 10px;
-    }
-  }
-}
-
 @media (max-width: 575.98px) {
   .hero video {
     display: none;
@@ -1150,7 +1132,7 @@ footer {
       z-index: 2;
       width: auto;
       transform: rotate(-90deg);
-      background-color: $primaryBlue;
+      background-color: $primaryRed;
       padding: 10px;
       color: $white;
     }
@@ -1204,13 +1186,13 @@ footer {
     &:hover {
       .info {
         width: 100%;
-        background-color: $primaryBlue;
+        background-color: $primaryRed;
       }
     }
     .social-links-container {
       position: relative;
       span {
-        background-color: $primaryBlue;
+        background-color: $primaryRed;
         color: $white;
         padding: 5px 12px;
         @extend .flex-center;
@@ -1229,7 +1211,7 @@ footer {
           width: 100%;
 
           &:hover {
-            background-color: $primaryBlue;
+            background-color: $primaryRed;
             color: $white;
           }
         }
@@ -1252,12 +1234,7 @@ footer {
   background-color: $darkBlue;
   .blog-box {
     background-color: $white;
-    border: 1px solid #e5e5e5;
     border-radius: 0;
-    -webkit-border-radius: 0;
-    -moz-border-radius: 0;
-    -ms-border-radius: 0;
-    -o-border-radius: 0;
     padding: 0;
     margin-bottom: 30px;
     position: relative;
@@ -1271,21 +1248,13 @@ footer {
       content: "";
       width: 100%;
       height: 30%;
-      background-image: linear-gradient(to bottom, rgba(255, 0, 0, 0), $black);
+      background-image: linear-gradient(to bottom, transparent, $darkBlue);
       transition: 2s;
-      -webkit-transition: 2s;
-      -moz-transition: 2s;
-      -ms-transition: 2s;
-      -o-transition: 2s;
     }
     &:hover {
       &::before {
         height: 100%;
         transition: 2s;
-        -webkit-transition: 2s;
-        -moz-transition: 2s;
-        -ms-transition: 2s;
-        -o-transition: 2s;
       }
       .blog-box-content {
         bottom: 0;
@@ -1325,19 +1294,13 @@ footer {
       width: 100%;
       height: 100%;
       @extend .flex-center;
-      -webkit-transform: translate(-50%, -50%);
-      -moz-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-      -o-transform: translate(-50%, -50%);
       opacity: 0;
     }
     .blog-img {
       width: 100%;
       height: 400px;
       object-fit: cover;
-      -o-object-fit: cover;
       object-position: center;
-      -o-object-position: center;
     }
   }
   .blogs-container {
@@ -1348,6 +1311,7 @@ footer {
 }
 
 .blog-date {
+  color: $white;
   margin-bottom: 10px;
   .dt {
     font-size: 40px;
@@ -1365,50 +1329,35 @@ footer {
   }
   .extra-info {
     font-size: 11px;
+    color: $white;
     span {
+      color: $primaryRed;
       display: inline-block;
       padding: 5px;
       margin-right: 10px;
     }
   }
   .blog-post {
+    .dt {
+      text-align: center;
+    }
     img {
       width: 100%;
       margin: 30px auto 70px;
     }
-    h1 {
-      color: $black;
-      font-weight: 700;
-      margin: 15px auto;
-    }
-    h2 {
-      color: $black;
-      font-weight: 700;
-      text-align: center;
-      margin: 15px auto;
-    }
-    h3 {
-      color: $black;
-      font-weight: 700;
-      margin: 15px auto;
-    }
-    h4 {
-      color: $black;
-      font-weight: 700;
-      margin: 15px auto;
-    }
-    h5 {
-      color: $black;
-      font-weight: 700;
-      margin: 15px auto;
-    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
     h6 {
-      color: $black;
+      color: $white;
       font-weight: 700;
       margin: 15px auto;
     }
+
     a {
-      color: $primaryBlue;
+      color: $primaryRed;
       &:hover {
         color: $white;
       }
@@ -1418,6 +1367,7 @@ footer {
     padding-left: 5px;
   }
   p {
+    color: $white;
     line-height: 1.8;
   }
   ul {
@@ -1427,29 +1377,41 @@ footer {
     }
   }
   hr {
-    background-color: #dddddd;
+    background-color: $purple;
   }
   .page-item.disabled {
     .page-link {
       cursor: not-allowed;
+      color: $black;
       pointer-events: none;
+    }
+    &:hover .page-link {
+      color: $white !important;
     }
   }
   .page-link {
-    color: $lavenderBlue;
+    background-color: $darkBlue;
+    color: $white;
     cursor: pointer;
     pointer-events: all;
+    border-color: $purple;
   }
   label {
     margin-bottom: 5px;
   }
   .form-control {
+    background-color: $darkBlue;
+    border-color: rgba($purple, 50%);
     margin-bottom: 10px;
+
+    &::placeholder {
+      color: $white;
+    }
   }
   .comment-section {
     padding-top: 50px;
     margin: 30px auto 30px;
-    border-top: 1px solid #dddddd;
+    border-top: 1px solid $purple;
     .reaction-bar {
       padding: 0px;
       a {
@@ -1459,24 +1421,22 @@ footer {
       }
       a.like {
         &:hover {
-          color: $primaryBlue;
+          color: $primaryRed;
         }
         .active {
-          color: $primaryBlue;
-          color: $primaryBlue;
+          color: $primaryRed;
+          color: $primaryRed;
         }
       }
       a.reply {
         &:hover {
-          color: $primaryBlue;
+          color: $primaryRed;
         }
       }
     }
     .comment {
-      display: flex;
-      display: -webkit-flex;
-      align-items: center;
-      color: $black;
+      @extend .flex-center-start;
+      color: $white;
       margin-bottom: 10px;
       img {
         margin-right: 10px;
@@ -1501,56 +1461,57 @@ footer {
   .reply-section {
     padding: 30px;
     margin: 20px auto;
-    border: 1px solid #dddddd;
+    border: 1px solid $purple;
   }
 }
 .blog-heading-container {
   margin-bottom: 5px;
-  border-left: 1px solid #dddddd;
+  border-left: 1px solid $purple;
 }
 .page-item {
   &:hover {
     .page-link {
-      background-color: $primaryBlue;
+      background-color: $primaryRed;
       color: $white;
-      border-color: $primaryBlue;
+      border-color: $primaryRed;
     }
   }
 }
 .page-item.active {
   .page-link {
-    background-color: $primaryBlue;
+    background-color: $primaryRed;
     color: $white;
-    border-color: $primaryBlue;
+    border-color: $primaryRed;
   }
 }
 .sidebar {
   border: none;
-  border-left: 0.5px solid #dddddd;
+  border-left: 0.5px solid rgba($purple, 10%);
 }
 .sidebar-content {
   padding: 10px;
   h4 {
-    color: $black;
+    color: $white;
     padding-left: 15px;
     margin-bottom: 20px;
   }
   .old-blogs {
-    list-style-type: square;
+    list-style-type: none;
+    padding-left: 10px;
     margin-top: 10px;
     li {
-      font-size: $largeFont;
-      line-height: 25px;
+      font-size: $regularFont;
       padding: 5px 15px;
+      margin-bottom: 10px;
       a {
         color: $lavenderBlue;
         display: block;
       }
       &:hover {
         background-color: rgba($lavenderBlue, 5%);
-        color: $primaryBlue;
+        color: $primaryRed;
         a {
-          color: $primaryBlue;
+          color: $primaryRed;
         }
       }
     }
@@ -1564,17 +1525,17 @@ footer {
       color: $lavenderBlue;
       margin: 0 5px 10px;
       display: inline-block;
-      border-radius: 30px;
+      border-radius: 10px;
       a {
         color: $lavenderBlue;
         padding: 10px 15px !important;
         display: block;
         &:hover {
-          color: $primaryBlue;
+          color: $white;
         }
       }
       &:hover {
-        background-color: #eeeeee;
+        background-color: $primaryRed;
       }
     }
   }
@@ -1584,26 +1545,27 @@ footer {
 .contact {
   background-color: $darkBlue;
   h3 {
-    color: #000000;
-    font-size: 24px;
+    color: $white;
+    font-size: $largeFont;
   }
   ul {
     list-style-type: none;
     margin-top: 30px;
     padding-left: 15px;
     li {
-      font-size: 16px;
+      font-size: $regularFont;
+      color: $white;
       margin-bottom: 30px;
       a {
-        color: #666666;
+        color: $white;
         &:hover {
-          color: #ff6008;
+          color: $primaryRed;
         }
       }
     }
   }
   label {
-    color: #000000;
+    color: $white;
     margin: 10px auto;
   }
   iframe {
@@ -1620,17 +1582,18 @@ footer {
 }
 
 footer {
-  background-color: $black;
+  background-color: $darkBlue;
   color: $white;
-  border-top: 1px dotted $primaryBlue;
+  border-top: 1px dotted $primaryRed;
   animation: borderColorChange 10s ease-in-out infinite;
+  padding: 15px 0;
   a {
     color: $white;
   }
 
   @keyframes borderColorChange {
     0% {
-      border-color: $primaryBlue;
+      border-color: $primaryRed;
     }
     85% {
       border-color: #00aced;
@@ -1638,5 +1601,17 @@ footer {
     100% {
       border-color: $purple;
     }
+  }
+}
+
+// Services
+.service-details {
+  background-color: $darkBlue;
+
+  h2 {
+    max-width: 60%;
+  }
+  p {
+    color: $white;
   }
 }
