@@ -16,7 +16,7 @@ import { BlogComponent } from './pages/blog/blog.component';
     BlogComponent,
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule
   ],
   providers: [],
