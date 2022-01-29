@@ -33,15 +33,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
   ],
   imports: [
-<<<<<<< HEAD
-    BrowserModule.withServerTransition({ appId: 'serverApp' }),
-    AppRoutingModule
-=======
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
 
->>>>>>> b5de888765d06f72a605a5f8537b4bc01d3d2392
   ],
   providers: [],
   bootstrap: [AppComponent]
