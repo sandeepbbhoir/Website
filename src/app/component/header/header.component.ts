@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-
+  navbarFixed:boolean=false;
   constructor(private router: Router) { }
 
 
@@ -15,5 +15,8 @@ export class HeaderComponent implements OnInit {
   }
   goto(path: string):void {
     this.router.navigateByUrl(path);
+}
+@HostListener('window:scroll',['$event']) onscroll(){
+  ((window.scrollY>100)? this.navbarFixed=true:this.navbarFixed=false);
 }
 }

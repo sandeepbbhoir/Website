@@ -43,6 +43,22 @@ const routes: Routes = [
     path:'contact',
     loadChildren: ()=>import('./pages/contact/contact.module').then(m =>m.ContactModule)
   },
+  {
+    path:'privacy',
+    loadChildren: ()=>import('./pages/privacy-policy/privacy-policy.module').then(m =>m.PrivacyPolicyModule)
+  },
+  {
+    path:'term',
+    loadChildren: ()=>import('./pages/terms/terms.module').then(m =>m.TermsModule)
+  },
+  {
+    path:'faq',
+    loadChildren: ()=>import('./pages/faq/faq.module').then(m =>m.FaqModule)
+  },
+  {
+    path:'career',
+    loadChildren: ()=>import('./pages/career/career.module').then(m =>m.CareerModule)
+  },
 ];
 
 @NgModule({
