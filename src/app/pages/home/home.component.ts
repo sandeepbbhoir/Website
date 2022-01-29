@@ -1,8 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { OwlOptions } from 'ngx-owl-carousel-o';
+import Typed from 'typed.js';
+import { Meta } from '@angular/platform-browser';
+
 // import { Parallax } from 'parallax-js';
-import { Lightbox } from 'ngx-lightbox';
 
 @Component({
   selector: 'app-home',
@@ -37,16 +39,42 @@ export class HomeComponent implements OnInit
     },
     nav: true
   }
+  text:any;
 
 
-  constructor(private router: Router) {
 
+  constructor(private router: Router,private meta: Meta) {
+    this.meta.addTags([
+      { name: 'keywords', content: 'Digital marketing, Sale Online, Seo, Android App, ios App, Boost Sales, Advertising, Marketing, Website Traffic, Blockchain Development' },
+      { name: 'description', content: '60-80% boost your sales with our strategy. We help business from local to organized business to gain more sales & brand awareness by promoting them on social media in a suitable budget for them.' },
+      { name: 'author', content: 'Ojas Enterprise' },
+    ]);
   }
 
   ngOnInit(): void {
+    const options = {
+      strings: ["Digitalize", "Enhance"],
+      typeSpeed: 200,
+      backSpeed: 200,
+      loop: true,
+    }
+
+    new Typed(".typing-element", options);
+
+    const options2 = {
+      strings: ["Dreams", "Business"],
+      typeSpeed: 200,
+      backSpeed: 200,
+      loop: true,
+      startDelay: 2000
+    }
+
+    new Typed(".typing-elements2", options2);
   }
 
   goto(path: string): void {
     this.router.navigateByUrl(path);
   }
+
+
 }

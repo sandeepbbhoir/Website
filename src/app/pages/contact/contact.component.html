@@ -1,73 +1,68 @@
-<app-breadcrumb></app-breadcrumb>
+<!-- <app-breadcrumb></app-breadcrumb> -->
 <section class="contact">
-  <div class="container">
-    <div class="row">
-      <div class="titleContainer">
-        <span>Contact Us</span>
-        <h2>Let's Talk On Your Ideas</h2>
-      </div>
-      <div class="col-xs-12 col-sm-6 col-md-7 col-lg-7 col-xl-7 col-xxl-7">
-        <form id="contact-form" method="post" role="form" action="">
-          <div class="controls mt-2">
-            <div class="row">
-              <div class="col-md-6 mb-2">
-                <div class="form-group ">
-                  <label for="name">Name *</label>
-                  <input id="name" type="text" name="name" class="form-control" placeholder="Please Enter Your Name *"
-                    required="" data-error="Name is required.">
-                  <div class="help-block with-errors"></div>
-                </div>
-              </div>
-              <div class="col-md-6 mb-2">
-                <div class="form-group ">
-                  <label for="email">Email </label>
-                  <input id="email" type="email" name="email" class="form-control"
-                    placeholder="Please Enter Your Email " data-error="Valid email is required.">
-                  <div class="help-block with-errors"></div>
-                </div>
-              </div>
+    <div class="container">
+        <div class="row">
+            <div class="titleContainer">
+                <span>Contact Us</span>
+                <h2>Let's Talk On Your Ideas</h2>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-7 col-lg-7 col-xl-7 col-xxl-7">
+                <form id="contact-form" method="post" role="form" action="">
+                    <div class="controls mt-2">
+                        <div class="row">
+                            <div class="col-md-6 mb-2">
+                                <div class="form-group ">
+                                    <label for="name">Name *</label>
+                                    <input id="name" type="text" name="name" class="form-control" placeholder="Please Enter Your Name *" required="" data-error="Name is required.">
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-2">
+                                <div class="form-group ">
+                                    <label for="email">Email </label>
+                                    <input id="email" type="email" name="email" class="form-control" placeholder="Please Enter Your Email " data-error="Valid email is required.">
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12 mb-2">
+                                <div class="form-group ">
+                                    <label for="mobile">Mobile No. *</label>
+                                    <input id="mobile" type="tel" name="mobile" class="form-control" placeholder="Please Enter Your Mobile Number" required="" data-error="Mobile No. is required.">
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 mb-2">
+                                <div class="form-group ">
+                                    <label for="message">Message</label>
+                                    <textarea id="message" name="message" maxlength="160" class="form-control" placeholder="Write Your Message *" rows="4" onkeyup="countChar(this)"></textarea>
+                                </div>
+                                <div id="charNum"></div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <button type="submit" class="btn secondary-btn" name="submit">Submit</button>
+                                <button type="reset" class="btn primary-btn" name="reset">Reset</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-4 col-xxl-4 offset-md-1 offset-lg-1 offset-xl-1 offset-xxl-1">
+                <h3>Address Details</h3>
+                <ul>
+                    <li class="map_ico">Bhiwandi Nashik - 422030</li>
+                    <li class="mobile_ico"><a href="tel:+911234567890">+911234567890</a></li>
+                    <li class="mail_ico"><a href="mailto:contact@ojasenterprises.in">contact@ojasenterprises.in</a></li>
+                </ul>
             </div>
 
-            <div class="row">
-              <div class="col-md-12 mb-2">
-                <div class="form-group ">
-                  <label for="mobile">Mobile No. *</label>
-                  <input id="mobile" type="tel" name="mobile" class="form-control"
-                    placeholder="Please Enter Your Mobile Number" required="" data-error="Mobile No. is required.">
-                  <div class="help-block with-errors"></div>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-12 mb-2">
-                <div class="form-group ">
-                  <label for="message">Message</label>
-                  <textarea id="message" name="message" maxlength="160" class="form-control"
-                    placeholder="Write Your Message *" rows="4" onkeyup="countChar(this)"></textarea>
-                </div>
-                <div id="charNum"></div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-12">
-                <button type="submit" class="btn secondary-btn" name="submit">Submit</button>
-                <button type="reset" class="btn primary-btn" name="reset">Reset</button>
-              </div>
-            </div>
-          </div>
-        </form>
-      </div>
-      <div
-        class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-4 col-xxl-4 offset-md-1 offset-lg-1 offset-xl-1 offset-xxl-1">
-        <h3>Address Details</h3>
-        <ul>
-          <li class="map_ico">Bhiwandi Nashik - 422030</li>
-          <li class="mobile_ico"><a href="tel:+911234567890">+911234567890</a></li>
-          <li class="mail_ico"><a href="mailto:contact@ojasenterprises.in">contact@ojasenterprises.in</a></li>
-        </ul>
-      </div>
-
+        </div>
     </div>
-  </div>
 
 </section>
