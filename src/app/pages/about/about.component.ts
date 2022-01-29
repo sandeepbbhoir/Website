@@ -18,9 +18,9 @@ export class AboutComponent implements OnInit {
 
   ngOnInit() {
     const options = {
-      strings: ["Digital Marketing Agency","Technology Planner", "Pile of Tech Stack","Time Saving Agency","Social Media Geek"],
-      typeSpeed: 200,
-      backSpeed: 200,
+      strings: ["Digital Marketing Agency","Technology Planners", "Pile of Tech Stack","Time Saving Agency","Social Media Geek"],
+      typeSpeed: 150,
+      backSpeed: 150,
       loop: true,
 
     }

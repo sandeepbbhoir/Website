@@ -53,20 +53,21 @@ export class HomeComponent implements OnInit
 
   ngOnInit(): void {
     const options = {
-      strings: ["Digitalize", "Enhance"],
-      typeSpeed: 200,
-      backSpeed: 200,
+      strings: ["Digitalize ^4000 ", "Enhance ^3000"],
+      typeSpeed: 150,
+      backSpeed: 150,
       loop: true,
     }
 
     new Typed(".typing-element", options);
 
+
     const options2 = {
-      strings: ["Dreams", "Business"],
-      typeSpeed: 200,
-      backSpeed: 200,
+      strings: ["Dreams ^4000", "Business ^1000"],
+      typeSpeed: 150,
+      backSpeed: 150,
       loop: true,
-      startDelay: 2000
+      startDelay: 3000
     }
 
     new Typed(".typing-elements2", options2);
