@@ -73,6 +73,7 @@ export class HomeComponent implements OnInit
     new Typed(".typing-elements2", options2);
   }
 
+
   goto(path: string): void {
     this.router.navigateByUrl(path);
   }
