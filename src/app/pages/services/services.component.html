@@ -8,49 +8,55 @@
             <p class="lead" data-aos="fade-up" data-aos-duration="1200">Our expertise is in Web Application Development, UI/Front End Dev, Mobile App Dev, Mobile App Testing, Testing Services</p>
         </div>
         <div class="row">
-            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 col-xl-3 col-xxl-3" (click)="showDevelopment()">
-                <div class="serviceBox" data-aos="fade-up" data-aos-duration="1500">
+            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 col-xl-3 col-xxl-3">
+                <label class="serviceBox" data-aos="fade-up" data-aos-duration="1500" for="input-1">
                     <div class="icon">
-                        <img src="../../../assets/img/services/web-coding.png" alt="Web Development">
+                        <img src="../../../assets/img/services/web-development.svg" alt="Web Development">
                     </div>
                     <div class="content">
                         <h3>Web Development</h3>
                         <p>Angular, .Net MVC, .Net Core</p>
                     </div>
-                </div>
+                </label>
+
             </div>
-            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 col-xl-3 col-xxl-3" (click)="showDigital()">
-                <div class="serviceBox" data-aos="fade-up" data-aos-duration="1500">
+            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 col-xl-3 col-xxl-3">
+                <label class="serviceBox" data-aos="fade-up" data-aos-duration="1500" for="input-2">
                     <div class="icon">
-                        <img src="../../../assets/img/services/web-coding.png" alt="Blockchain Development">
+                        <img src="../../../assets/img/services/digital-marketing.svg" alt="Blockchain Development">
                     </div>
                     <div class="content">
                         <h3>Digital Marketing</h3>
                         <p>SEO, PPC, Social Media Marketing, Email Marketing, Content Marketing, Affilate Marketing</p>
                     </div>
-                </div>
+                </label>
+
             </div>
-            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 col-xl-3 col-xxl-3" (click)="showIOT()">
-                <div class="serviceBox" data-aos="fade-up" data-aos-duration="1500">
+            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 col-xl-3 col-xxl-3">
+
+                <label class="serviceBox" data-aos="fade-up" data-aos-duration="1500" for="input-3">
                     <div class="icon">
-                        <img src="../../../assets/img/services/web-coding.png" alt="IOT Development">
+                        <img src="../../../assets/img/services/iot.svg" alt="IOT Development">
                     </div>
                     <div class="content">
                         <h3>IOT Development</h3>
                         <p>IoT Cloud Platform, Edge Computing, Mobile IoT(MIoT), Bluetooth Low Energy (BLE), IoT Protocol</p>
                     </div>
-                </div>
+                </label>
+
             </div>
-            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 col-xl-3 col-xxl-3" (click)="showMobile()">
-                <div class="serviceBox" data-aos="fade-up" data-aos-duration="1500">
+            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 col-xl-3 col-xxl-3">
+
+                <label class="serviceBox" data-aos="fade-up" data-aos-duration="1500" for="input-4">
                     <div class="icon">
-                        <img src="../../../assets/img/services/web-coding.png" alt="Mobile App Development">
+                        <img src="../../../assets/img/services/mobile-app.svg" alt="Mobile App Development">
                     </div>
                     <div class="content">
                         <h3>Mobile App Development</h3>
                         <p>Android App Development, iOS App Development, <small>(Hybrid)</small></p>
                     </div>
-                </div>
+                </label>
+
             </div>
             <p class="text-center mt-5">
                 <a href="" class="btn secondary-btn">Explore All Services</a>
@@ -58,15 +64,70 @@
         </div>
     </div>
 </section>
-<p-dialog header="Title" [(visible)]="displayWeb" [style]="{width: '50vw'}">
-    Web Development
-</p-dialog>
-<p-dialog header="Title" [(visible)]="displayMarketing" [style]="{width: '50vw'}">
-    Digital Marketing
-</p-dialog>
-<p-dialog header="Title" [(visible)]="displayIot" [style]="{width: '50vw'}">
-    IOT Development
-</p-dialog>
-<p-dialog header="Title" [(visible)]="displayMobile" [style]="{width: '50vw'}">
-    Mobile App Development
-</p-dialog>
+<input type="checkbox" id="input-1" class="checkbox">
+<div class="modal-bg-1">
+    <div class="modal-1">
+        <label for="input-1"><i class="ri-close-fill"></i></label>
+        <img src="../../../assets/img/services/web-development.svg" alt="">
+        <h1>Web Development</h1>
+        <p>Lorem ipsum dolor stio repellat explicabo quae ipsum, fuga asperiores sunt sed illum, ad quasi mollitia nulla autem aliquam nemo consequuntur quos quam eum praesentium maiores iste! Sit totam alias quis iusto beatae?
+        </p>
+    </div>
+</div>
+<input type="checkbox" id="input-2" class="checkbox">
+<div class="modal-bg-2">
+    <div class="modal-2">
+        <label for="input-2"><i class="ri-close-fill"></i></label>
+        <img src="../../../assets/img/services/digital-marketing.svg" alt=" ">
+        <h1>Digital Marketing</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis distinctio rerum doloremque sed recusandae ducimus maxime dolores sit asperiores nesciunt ea voluptas, et debitis voluptate quas voluptatum veniam impedit, laboriosam assumenda fuga
+            accusa
+        </p>
+    </div>
+</div>
+<input type="checkbox" id="input-3" class="checkbox">
+<div class="modal-bg-3">
+    <div class="modal-3">
+        <label for="input-3"><i class="ri-close-fill"></i></label>
+        <img src="../../../assets/img/services/iot.svg" alt="">
+        <h1>IOT Development</h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea libero animi, soluta veritatis repellendus quod itaque eum expedita fuga id suscipit, incidunt in neque eligendi odio quaerat illum! Vero maiores quisquam quidem. Placeat voluptatum
+            totam natus nihil suscipit commodi at pariatur fuga error ipsam repellendus quasi quod illum magni quo cumque tempora, dolor, accusantium a voluptates possimus? Blanditiis nulla pariatur numquam itaque cum provident ab dicta odit obcaecati
+            facilis placeat, consequatur, magnam nostrum? Nisi tempore ullam cumque saepe excepturi iusto quaerat nesciunt assumenda rem! Perspiciatis quia, ipsum pariatur cum mollitia dolore quo ab obcaecati natus, voluptatem dicta minima vero! Rem,
+            dolore eum facere ipsam fuga consectetur alias sapiente dignissimos! Accusamus sint aliquid tempora enim, modi maiores illum omnis, earum rem sapiente soluta eos ex aliquam odio quia repudiandae illo voluptatibus repellat dolore, ad nobis
+            beatae? Repudiandae soluta dolorum possimus provident eum iure dolores nam? Reprehenderit placeat deserunt voluptatem pariatur, perferendis iste, impedit in ex dolores culpa neque fuga! Rem eligendi placeat hic? Asperiores magnam expedita
+            pariatur tenetur doloremque. Velit dignissimos optio repellat explicabo quae ipsum, fuga asperiores sunt sed illum, ad quasi mollitia nulla autem aliquam nemo consequuntur quos quam eum praesentium maiores iste! Sit totam alias quis iusto
+            beatae?
+        </p>
+    </div>
+</div>
+<input type="checkbox" id="input-4" class="checkbox">
+<div class="modal-bg-4">
+    <div class="modal-4">
+        <label for="input-4"><i class="ri-close-fill "></i></label>
+        <img src="../../../assets/img/services/mobile-app.svg" alt="">
+        <h1>Mobile App Development</h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea libero animi, soluta veritatis repellendus quod itaque eum expedita fuga id suscipit, incidunt in neque eligendi odio quaerat illum! Vero maiores quisquam quidem. Placeat voluptatum
+            totam natus nipellat explicabo quae ipsum, fuga asperiores sunt sed illum, ad quasi mollitia nulla autem aliquam nemo consequuntur quos quam eum praesentium maiores iste! Sit totam alias quis iusto beatae?
+        </p>
+    </div>
+</div>
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered " role="document ">
+        <div class="modal-content ">
+            <div class="modal-header ">
+                <h5 class="modal-title " id="exampleModalLongTitle ">Modal title</h5>
+                <button type="button " class="close " data-dismiss="modal " aria-label="Close ">
+          <span aria-hidden="true ">&times;</span>
+        </button>
+            </div>
+            <div class="modal-body ">
+                ...
+            </div>
+            <div class="modal-footer ">
+                <button type="button " class="btn btn-secondary " data-dismiss="modal ">Close</button>
+                <button type="button " class="btn btn-primary ">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
