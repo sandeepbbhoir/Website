@@ -127,12 +127,10 @@
                     "configurations": {
                         "production": {
                             "outputHashing": "media",
-                            "fileReplacements": [
-                                {
-                                    "replace": "src/environments/environment.ts",
-                                    "with": "src/environments/environment.prod.ts"
-                                }
-                            ]
+                            "fileReplacements": [{
+                                "replace": "src/environments/environment.ts",
+                                "with": "src/environments/environment.prod.ts"
+                            }]
                         },
                         "development": {
                             "optimization": false,
@@ -176,94 +174,6 @@
                     "defaultConfiguration": "production"
                 }
             }
-<<<<<<< HEAD
-          },
-          "defaultConfiguration": "development"
-        },
-        "extract-i18n": {
-          "builder": "@angular-devkit/build-angular:extract-i18n",
-          "options": {
-            "browserTarget": "ojasEnterprises:build"
-          }
-        },
-        "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "main": "src/test.ts",
-            "polyfills": "src/polyfills.ts",
-            "tsConfig": "tsconfig.spec.json",
-            "karmaConfig": "karma.conf.js",
-            "inlineStyleLanguage": "scss",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
-            "styles": [
-              "src/styles.scss"
-            ],
-            "scripts": []
-          }
-        },
-        "server": {
-          "builder": "@angular-devkit/build-angular:server",
-          "options": {
-            "outputPath": "dist/ojasEnterprises/server",
-            "main": "server.ts",
-            "tsConfig": "tsconfig.server.json",
-            "inlineStyleLanguage": "scss"
-          },
-          "configurations": {
-            "production": {
-              "outputHashing": "media",
-              "fileReplacements": [
-                {
-                  "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.prod.ts"
-                }
-              ]
-            },
-            "development": {
-              "optimization": false,
-              "sourceMap": true,
-              "extractLicenses": false
-            }
-          },
-          "defaultConfiguration": "production"
-        },
-        "serve-ssr": {
-          "builder": "@nguniversal/builders:ssr-dev-server",
-          "configurations": {
-            "development": {
-              "browserTarget": "ojasEnterprises:build:development",
-              "serverTarget": "ojasEnterprises:server:development"
-            },
-            "production": {
-              "browserTarget": "ojasEnterprises:build:production",
-              "serverTarget": "ojasEnterprises:server:production"
-            }
-          },
-          "defaultConfiguration": "development"
-        },
-        "prerender": {
-          "builder": "@nguniversal/builders:prerender",
-          "options": {
-            "routes": [
-              "/"
-            ]
-          },
-          "configurations": {
-            "production": {
-              "browserTarget": "ojasEnterprises:build:production",
-              "serverTarget": "ojasEnterprises:server:production"
-            },
-            "development": {
-              "browserTarget": "ojasEnterprises:build:development",
-              "serverTarget": "ojasEnterprises:server:development"
-            }
-          },
-          "defaultConfiguration": "production"
-=======
->>>>>>> b5de888765d06f72a605a5f8537b4bc01d3d2392
         }
     },
     "defaultProject": "ojasEnterprises"

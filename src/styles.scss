@@ -684,6 +684,7 @@ video {
         cursor: pointer;
         backdrop-filter: blur(2px);
         height: 100%;
+        width: 100%;
         * {
             text-align: center;
             position: relative;
@@ -778,14 +779,18 @@ video {
     height: 0;
     visibility: hidden;
     z-index: 9000;
-    padding: 40px 20px;
+    padding: 40px 80px;
     border-radius: 5px;
     overflow-y: auto;
-    background: linear-gradient(0deg, rgba($primaryRed, 100%) 0%, $black 100%) no-repeat;
+    background: linear-gradient(7deg, #ff1b46 -2%, #0d131f 73%) no-repeat;
     color: $white;
     border: 1px dashed $primaryRed;
     @extend .flex-center;
+    justify-content: flex-start;
     flex-direction: column;
+    h1 {
+        margin: 10px 0;
+    }
     &::-webkit-scrollbar {
         display: none;
     }
@@ -1750,6 +1755,17 @@ footer {
                     }
                 }
             }
+        }
+    }
+}
+
+// Responsive
+// services
+@media screen and (max-width:768px) {
+    .common-modal {
+        padding: 40px;
+        h1 {
+            text-align: center;
         }
     }
 }
