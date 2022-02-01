@@ -23,6 +23,7 @@ $mainHeading: 60px;
 $subHeading: 20px;
 * {
     box-sizing: border-box;
+    // border: 1px solid red;
 }
 
 html {
@@ -353,10 +354,6 @@ video {
 // Common Css End Here
 // Main Css Start
 // Navbar
-.navFixed {
-    background: red;
-}
-
 .navbar {
     background-color: rgb($black, 10%) !important;
     border-bottom: none;
@@ -391,6 +388,21 @@ video {
                     background-color: $primaryRed;
                 }
             }
+        }
+    }
+    .navbar-toggler {
+        background: transparent;
+        outline: 0;
+        border: 0;
+        font-size: $largeFont+$largeFont;
+        &:focus,
+        &:active,
+        &:focus {
+            outline: none;
+            box-shadow: none;
+        }
+        i {
+            color: $white;
         }
     }
 }
@@ -888,7 +900,7 @@ video {
             .content {
                 text-align: center;
                 h3 {
-                    font-size: $largeFont + 4px;
+                    font-size: $largeFont;
                     font-weight: 600;
                     color: $white;
                     margin-bottom: 10px;
@@ -1738,34 +1750,39 @@ footer {
     }
 }
 
-@media screen and (max-width:990px) {
+@media screen and (max-width:990px) {}
+
+// Responsive
+@media screen and (max-width:768px) {
     .navbar {
-        .navbar-toggler-icon {
-            color: $white !important;
-            // background: $white !important;
-        }
         .nav-item {
             .nav-link {
+                text-align: center;
                 &.active,
                 &:hover {
                     &::after {
-                        left: 0;
+                        left: 50%;
                         width: 15%;
-                        transform: translateX(0);
+                        transform: translateX(-50%);
                     }
                 }
             }
         }
     }
-}
-
-// Responsive
-// services
-@media screen and (max-width:768px) {
     .common-modal {
         padding: 40px;
         h1 {
             text-align: center;
+        }
+    }
+}
+
+@media screen and (max-width:991px) {
+    .navbar {
+        .nav-link {
+            text-align: center;
+            &.active,
+            &:hover {}
         }
     }
 }
