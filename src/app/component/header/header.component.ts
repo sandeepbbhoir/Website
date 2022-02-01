@@ -1,4 +1,4 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -8,6 +8,8 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
   navbarFixed:boolean=false;
+  expandNav:boolean=false;
+
   constructor(private router: Router) { }
 
 
@@ -15,8 +17,13 @@ export class HeaderComponent implements OnInit {
   }
   goto(path: string):void {
     this.router.navigateByUrl(path);
+   
 }
-@HostListener('window:scroll',['$event']) onscroll(){
+  @HostListener('window:scroll',['$event']) onscroll(){
   ((window.scrollY>100)? this.navbarFixed=true:this.navbarFixed=false);
-}
+  }
+  navMenu(){
+    this.expandNav=!this.expandNav;
+  }
+
 }
