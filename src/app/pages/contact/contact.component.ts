@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Meta } from '@angular/platform-browser';
+import { SeoService } from 'src/app/shared/seo.service';
 
 @Component({
   selector: 'app-contact',
@@ -7,16 +8,17 @@ import { Meta } from '@angular/platform-browser';
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent implements OnInit {
-
-  constructor(private meta:Meta) {
-    this.meta.addTags([
-      { name: 'keywords', content: 'Digital marketing agency, Digital marketing, Digital marketing company, app devlopers' },
-      { name: 'description', content: 'This is an article about Angular Meta service' },
-      { name: 'author', content: 'Ojas Enterprise' },
-    ]);
+  private seoTags:any=[
+    {title:'Contact Us'},
+    {keywords:'Digital marketing agency, Digital marketing, Digital marketing company, app devlopers'},
+    {description:'This is an article about Angular Meta service'},
+  ]
+  constructor(private meta:Meta,private seo:SeoService) {
+    this.seo.updateMeta(this.seoTags);
   }
 
   ngOnInit(): void {
+
   }
 
 }
