@@ -17,7 +17,7 @@ export class HeaderComponent implements OnInit {
   }
   goto(path: string):void {
     this.router.navigateByUrl(path);
-   
+
 }
   @HostListener('window:scroll',['$event']) onscroll(){
   ((window.scrollY>100)? this.navbarFixed=true:this.navbarFixed=false);
@@ -25,5 +25,11 @@ export class HeaderComponent implements OnInit {
   navMenu(){
     this.expandNav=!this.expandNav;
   }
+  ToggleNavBar () {
+    let element: HTMLElement = document.getElementsByClassName( 'navbar-toggler' )[ 0 ] as HTMLElement;
+    if ( element.getAttribute( 'aria-expanded' ) == 'true' ) {
+        element.click();
+    }
+}
 
 }

@@ -3,11 +3,11 @@
     <div class="container">
         <div class="overlay">
         </div>
-        <div class="video-container">
+        <!-- <div class="video-container">
             <video autoplay loop muted poster="../../../assets/img/hero.jpg" oncanplay="this.play()" onloadedmetadata="this.muted = true">
         <source src="../../../assets/videos/hero.mp4" type="video/mp4" />
       </video>
-        </div>
+        </div> -->
         <span class="icon icon1">
       <img src="../../../assets/img/icon1.png" alt="" loading="lazy">
     </span>
@@ -33,7 +33,11 @@
             <div class="col-xs-12 col-sm-12 col-md-7 col-lg-5 col-xl-5 col-xxl-5 offset-lg-1 offset-xl-1 offset-xxl-1">
                 <div class="flex-container">
                     <div class="flex-content">
-                        <h2 data-aos="fade-up" data-aos-duration="1000">We <span class="typing-element"></span><br/> your <span class="typing-elements2"></span></h2>
+                        <div class="text-content">
+                            <h2>We <span class="typing-element"></span></h2>
+                            <h2>your <span class="typing-elements"></span></h2>
+
+                        </div>
                         <p data-aos="fade-up" data-aos-duration="1500">60-80% boost your sales with our strategy. We help business from local to organized business to gain more sales & brand awareness by promoting them on social media in a suitable budget for them.</p>
                         <p>
                             <a (click)="goto('services')" class="btn primary-btn" data-aos="fade-up" data-aos-duration="1700">Get Started <i
@@ -59,7 +63,7 @@
 <section class="about">
     <div class="container">
         <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
                 <div class="aboutBox flex-container">
                     <div class="flexContent">
                         <div class="titleContainer">
@@ -69,6 +73,9 @@
                         <p data-aos="fade-up" data-aos-duration="1000">Ojas Enterprise is modelized with a vision to provide a Software Development, web application development, Digital Marketing, IOT and Mobile App Development company with experienced IT consultants who can offer valuable business
                             solutions. We help you and your business connect with customers, integrate with vendors and empower employees to work to their fullest potential.
                         </p>
+                        <div class="aboutImgContainer aboutImgContainer1" data-aos="fade-up" data-aos-duration="2100">
+                            <img src="../../../assets/img/about.svg" alt="About">
+                        </div>
                         <div class="counterContainer">
                             <div class="counterBox" data-aos="fade-up" data-aos-duration="1500">
                                 <h3>150+</h3>
@@ -94,8 +101,8 @@
                 </div>
             </div>
 
-            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-5 col-xl-5 col-xxl-5 offset-lg-1 offset-xl-1 offset-xxl-1">
-                <div class="aboutImgContainer" data-aos="fade-up" data-aos-duration="2100">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-5 col-xl-5 col-xxl-5 offset-lg-1 offset-xl-1 offset-xxl-1 d-md-flex justify-content-md-center align-items-md-center ">
+                <div class="aboutImgContainer aboutImgContainer2" data-aos="fade-up" data-aos-duration="2100">
                     <img src="../../../assets/img/about.svg" alt="About">
                 </div>
             </div>
@@ -115,48 +122,52 @@
         </div>
         <div class="row">
             <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 col-xl-3 col-xxl-3">
-                <div class="serviceBox" data-aos="fade-up" data-aos-duration="1500">
+                <label class="serviceBox" data-aos="fade-up" data-aos-duration="1500" for="input-1">
                     <div class="icon">
                         <img src="../../../assets/img/services/web-development.svg" alt="Web Development">
                     </div>
                     <div class="content">
                         <h3>Web <br/>Development</h3>
-                        <p>Angular, .Net MVC, .Net Core</p>
+                        <p>Ojas Enterprise is here to provide a platform that combines smart web design with cutting-edge business principles to make your website incredibly attractive, user-friendly, and customer-friendly. By motivating, communicating, servicing, and interacting
+                          with the appropriate audience, our team ensures a premium experience.</p>
                     </div>
-                </div>
+                </label>
             </div>
             <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 col-xl-3 col-xxl-3">
-                <div class="serviceBox" data-aos="fade-up" data-aos-duration="1500">
+                <label class="serviceBox" data-aos="fade-up" data-aos-duration="1500" for="input-2">
                     <div class="icon">
                         <img src="../../../assets/img/services/digital-marketing.svg" alt="Blockchain Development">
                     </div>
                     <div class="content">
                         <h3>Digital <br/>Marketing</h3>
-                        <p>SEO, PPC, Social Media Marketing, Email Marketing, Content Marketing, Affilate Marketing</p>
+                        <p>Ojas Enterprise's Internet Marketing is a dynamic, versatile, and complete digital marketing agency that does not rely on illusions to attract new customers. Instead, Ojas Enterprise relies on its own search engine optimization (SEO) and marketing
+                          expertise to attract new visitors to our site.</p>
                     </div>
-                </div>
+                </label>
             </div>
             <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 col-xl-3 col-xxl-3">
-                <div class="serviceBox" data-aos="fade-up" data-aos-duration="1500">
+                <label class="serviceBox" data-aos="fade-up" data-aos-duration="1500" for="input-3">
                     <div class="icon">
                         <img src="../../../assets/img/services/iot.svg" alt="IOT Development">
                     </div>
                     <div class="content">
                         <h3>IOT <br/>Development</h3>
-                        <p>IoT Cloud Platform, Edge Computing, Mobile IoT(MIoT), Bluetooth Low Energy (BLE), IoT Protocol</p>
+                        <p>The Internet of Things has grown common these days in many sectors of life, from households to industries to businesses. IoT is making the world smarter and better than ever before by connecting everything and everyone. But this is only the beginning.
+                          To realize the full potential of the Internet of Things, companies must first recognize the prospects for value creation and then solve the underlying issues in a systematic manner.</p>
                     </div>
-                </div>
+                </label>
             </div>
             <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 col-xl-3 col-xxl-3">
-                <div class="serviceBox" data-aos="fade-up" data-aos-duration="1500">
+                <label class="serviceBox" data-aos="fade-up" data-aos-duration="1500" for="input-4">
                     <div class="icon">
                         <img src="../../../assets/img/services/mobile-app.svg" alt="Mobile App Development">
                     </div>
                     <div class="content">
                         <h3>Mobile App <br/>Development</h3>
-                        <p>Android App Development, iOS App Development, <small>(Hybrid)</small></p>
+                        <p>We develop and deploy customised mobile apps. This covers expert business analysis, design and development of your mobile app from concept to launch, integration of the new product into your infrastructure, and on-demand optimization and scaling-up.
+                          We create mobile apps for a variety of platforms utilising cutting-edge technology and tried-and-true methods.</p>
                     </div>
-                </div>
+                </label>
             </div>
             <p class="text-center mt-5">
                 <a href="" class="btn secondary-btn" (click)="goto('services')">Explore All Services</a>
@@ -449,3 +460,53 @@
         </div>
     </div>
 </section>
+
+<!-- Modals -->
+<input type="checkbox" id="input-1" class="checkbox">
+<div class="modal-bg-1">
+    <div class="modal-1">
+        <label for="input-1"><i class="ri-close-fill"></i></label>
+        <img src="../../../assets/img/services/web-development.svg" alt="">
+        <h1>Web Development</h1>
+        <p>Ojas Enterprise is here to provide a platform that combines smart web design with cutting-edge business principles to make your website incredibly attractive, user-friendly, and customer-friendly. By motivating, communicating, servicing, and interacting
+            with the appropriate audience, our team ensures a premium experience.
+        </p>
+        <p>We develop a world-class user experience that connects your company's aims with the demands of your users. We have a team of specialists who provide excellent services and assist in the creation of a fantastic product that includes the processes
+            of discovery, definition, design, and development.</p>
+    </div>
+</div>
+<input type="checkbox" id="input-2" class="checkbox">
+<div class="modal-bg-2">
+    <div class="modal-2">
+        <label for="input-2"><i class="ri-close-fill"></i></label>
+        <img src="../../../assets/img/services/digital-marketing.svg" alt=" ">
+        <h1>Digital Marketing</h1>
+        <p>Ojas Enterprise's Internet Marketing is a dynamic, versatile, and complete digital marketing agency that does not rely on illusions to attract new customers. Instead, Ojas Enterprise relies on its own search engine optimization (SEO) and marketing
+            expertise to attract new visitors to our site.
+        </p>
+        <p>
+            We're not a static organisation. We don't restrict ourselves to a single industry. Ojas Enterprise has the expertise and resources to create a custom website and implement a variety of digital marketing services for any size business in any sector.
+        </p>
+    </div>
+</div>
+<input type="checkbox" id="input-3" class="checkbox">
+<div class="modal-bg-3">
+    <div class="modal-3">
+        <label for="input-3"><i class="ri-close-fill"></i></label>
+        <img src="../../../assets/img/services/iot.svg" alt="">
+        <h1>IOT Development</h1>
+        <p>The Internet of Things has grown common these days in many sectors of life, from households to industries to businesses. IoT is making the world smarter and better than ever before by connecting everything and everyone. But this is only the beginning.
+            To realize the full potential of the Internet of Things, companies must first recognize the prospects for value creation and then solve the underlying issues in a systematic manner.
+        </p>
+    </div>
+</div>
+<input type="checkbox" id="input-4" class="checkbox">
+<div class="modal-bg-4">
+    <div class="modal-4">
+        <label for="input-4"><i class="ri-close-fill "></i></label>
+        <img src="../../../assets/img/services/mobile-app.svg" alt="">
+        <h1>Mobile App Development</h1>
+        <p>We develop and deploy customised mobile apps. This covers expert business analysis, design and development of your mobile app from concept to launch, integration of the new product into your infrastructure, and on-demand optimization and scaling-up.
+            We create mobile apps for a variety of platforms utilising cutting-edge technology and tried-and-true methods.</p>
+    </div>
+</div>
