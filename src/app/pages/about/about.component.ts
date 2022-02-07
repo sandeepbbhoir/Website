@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Meta } from '@angular/platform-browser';
+import { SeoService } from 'src/app/shared/seo.service';
 import Typed from 'typed.js';
 @Component({
   selector: 'app-about',
@@ -7,13 +8,13 @@ import Typed from 'typed.js';
   styleUrls: ['./about.component.scss']
 })
 export class AboutComponent implements OnInit {
-
-  constructor(private meta:Meta) {
-    this.meta.addTags([
-      { name: 'keywords', content: 'development, digital marketing, IOT, Mobile app, , ios app' },
-      { name: 'description', content: 'TOjas enterprise is modelized with a vision to provide a software development, web application development, digital marketing, IOT and Mobile app Development company with experienced IT consultants who can offer valuable business solution. We help you and your business connect with customers, integrate with vendors and employees to work to their fullest potential.' },
-      { name: 'author', content: 'Ojas Enterprise' },
-    ]);
+  private seoTags:any=[
+    {title:'About Us'},
+    {keywords:'development, digital marketing, IOT, Mobile app, , ios app'},
+    {description:'Ojas enterprise is modelized with a vision to provide a software development, web application development, digital marketing, IOT and Mobile app Development company with experienced IT consultants who can offer valuable business solution. We help you and your business connect with customers, integrate with vendors and employees to work to their fullest potential.'},
+  ]
+  constructor(private meta:Meta,private seo:SeoService) {
+    this.seo.updateMeta(this.seoTags);
   }
 
   ngOnInit() {

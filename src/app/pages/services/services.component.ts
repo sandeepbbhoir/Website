@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Meta } from '@angular/platform-browser';
+import { SeoService } from 'src/app/shared/seo.service';
 
 @Component({
   selector: 'app-services',
@@ -11,12 +12,13 @@ export class ServicesComponent implements OnInit {
   displayMarketing:boolean=false;
   displayIot:boolean=false;
   displayMobile:boolean=false;
-  constructor(private meta:Meta) {
-    this.meta.addTags([
-      { name: 'keywords', content: 'Web Application, UI/Front End Dev, Mobile App Dev, Mobile App, Testing Services' },
-      { name: 'description', content: 'Our expertise is in Web Application Development, UI/Front End Dev, Mobile App Dev, Mobile App Testing, Testing Services' },
-      { name: 'author', content: 'Ojas Enterprise' },
-    ]);
+  private seoTags:any=[
+    {title:'Services'},
+    {keywords:'Web Application, UI/Front End Dev, Mobile App Dev, Mobile App, Testing Services'},
+    {description:'Our expertise is in Web Application Development, UI/Front End Dev, Mobile App Dev, Mobile App Testing, Testing Services'},
+  ]
+  constructor(private meta:Meta, private seo:SeoService) {
+    this.seo.updateMeta(this.seoTags);
    }
 
   ngOnInit(): void {
