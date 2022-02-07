@@ -70,7 +70,7 @@ export class HomeComponent implements OnInit
       startDelay: 3000
     }
 
-    new Typed(".typing-elements2", options2);
+    new Typed(".typing-elements", options2);
   }
 
 

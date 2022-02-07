@@ -12,5 +12,8 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     AOS.init();
   }
+  onActive(){
+    window.scroll(0,0);
+  }
 
 }

@@ -23,7 +23,6 @@ $mainHeading: 60px;
 $subHeading: 20px;
 * {
     box-sizing: border-box;
-    // border: 1px solid red;
 }
 
 html {
@@ -356,6 +355,7 @@ video {
 // Navbar
 .navbar {
     background-color: rgb($black, 10%) !important;
+    min-width: 100%;
     border-bottom: none;
     .navbar-brand {
         h1 {
@@ -364,6 +364,7 @@ video {
         img {
             width: 100px;
             max-width: 100%;
+            cursor: pointer;
         }
     }
     .nav-item {
@@ -396,8 +397,7 @@ video {
         border: 0;
         font-size: $largeFont+$largeFont;
         &:focus,
-        &:active,
-        &:focus {
+        &:active {
             outline: none;
             box-shadow: none;
         }
@@ -407,12 +407,16 @@ video {
     }
 }
 
+.navBackground {
+    background: #0009 !important;
+}
+
 // Hero
 .hero {
     background-color: $white;
-    background-image: url(../src/assets/img/hero.jpg);
+    background-image: url('../src/assets/img/hero.jpg');
     @extend .backgroundImg;
-    background-position: center;
+    // background-position: center;
     background-attachment: fixed;
     padding: 100px 30px;
     .overlay {
@@ -422,17 +426,20 @@ video {
         position: relative;
         z-index: 2;
     }
-    h2 {
-        font-size: 62px;
-        font-weight: 700;
-        color: $mainColor;
-        text-transform: capitalize;
-        letter-spacing: -3.5px;
-        // text-shadow: 1px 11px 6px rgb(0 0 0 / 12%);
-        span {
+    .text-content {
+        position: relative;
+        width: max-content;
+        h2 {
+            font-size: 62px;
             font-weight: 700;
-            color: $primaryRed;
-            text-shadow: 10px 0px 10px rgb(7 7 84 / 68%);
+            color: $mainColor;
+            text-transform: capitalize;
+            letter-spacing: -1.5px;
+            span {
+                font-weight: 700;
+                color: $primaryRed;
+                text-shadow: 10px 0px 10px rgb(7 7 84 / 68%);
+            }
         }
     }
     p {
@@ -626,6 +633,9 @@ video {
             animation: upDown 6s ease-out 1s alternate infinite none running;
         }
     }
+    .aboutImgContainer1 {
+        display: none;
+    }
     .aboutBox {
         max-width: 100%;
         display: block;
@@ -707,6 +717,11 @@ video {
         p {
             font-size: $smallFont;
             color: $white;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
         .icon {
             width: 100%;
@@ -1749,25 +1764,8 @@ footer {
     }
 }
 
-@media screen and (max-width:990px) {}
-
 // Responsive
 @media screen and (max-width:768px) {
-    .navbar {
-        .nav-item {
-            .nav-link {
-                text-align: center;
-                &.active,
-                &:hover {
-                    &::after {
-                        left: 50%;
-                        width: 15%;
-                        transform: translateX(-50%);
-                    }
-                }
-            }
-        }
-    }
     .common-modal {
         padding: 40px;
         h1 {
@@ -1816,6 +1814,23 @@ footer {
             max-width: 90%;
         }
     }
+    .about {
+        .aboutImgContainer {
+            max-width: 70%;
+            &::before {
+                display: none;
+            }
+        }
+    }
+    .follow-us {
+        .social-links {
+            li {
+                a {
+                    padding: 12px 15px;
+                }
+            }
+        }
+    }
     .about-us {
         .about-content-box {
             padding: 20px;
@@ -1841,8 +1856,45 @@ footer {
 
 @media screen and (max-width:991px) {
     .navbar {
-        .nav-link {
-            text-align: center;
+        .nav-item {
+            .nav-link {
+                text-align: center;
+                &.active,
+                &:hover {
+                    &::after {
+                        left: 50%;
+                        width: 15%;
+                        transform: translateX(-50%);
+                    }
+                }
+            }
+        }
+    }
+    .navBackground {
+        background: #000 !important;
+    }
+    .about {
+        .counterContainer {
+            .counterBox {
+                width: 50%;
+                margin-bottom: 20px;
+            }
+        }
+        .aboutImgContainer2 {
+            display: none;
+        }
+        .aboutImgContainer1 {
+            display: block;
+            margin: 0 auto;
+        }
+        .aboutImgContainer {
+            img {
+                max-width: 70% !important;
+                margin: auto;
+            }
+            &::before {
+                display: none;
+            }
         }
     }
 }
