@@ -16,7 +16,7 @@ export class HomeComponent implements OnInit
 {
   private seoTags:any=[
     {title:'Ojas Enterprise'},
-    {keywords:'Digital marketing, Sale Online, Seo, Android App, ios App, Boost Sales, Advertising, Marketing, Website Traffic, Blockchain Development'},
+    {keywords:'Digital marketing, sale online, seo, Android app, ios app, boost sales, Advertising, Marketing, website traffic, social media, angular'},
     {description:'60-80% boost your sales with our strategy. We help business from local to organized business to gain more sales & brand awareness by promoting them on social media in a suitable budget for them.'},
   ]
   customOptions: OwlOptions = {

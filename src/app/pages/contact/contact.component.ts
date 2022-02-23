@@ -11,7 +11,7 @@ export class ContactComponent implements OnInit {
   private seoTags:any=[
     {title:'Contact Us'},
     {keywords:'Digital marketing agency, Digital marketing, Digital marketing company, app devlopers'},
-    {description:'This is an article about Angular Meta service'},
+    {description:''},
   ]
   constructor(private meta:Meta,private seo:SeoService) {
     this.seo.updateMeta(this.seoTags);
