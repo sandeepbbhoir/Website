@@ -769,6 +769,11 @@ video {
     display: none;
 }
 
+.no-width-height {
+    width: 0;
+    height: 0;
+}
+
 .common-modal-bg {
     position: fixed;
     top: 0;
